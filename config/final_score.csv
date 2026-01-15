@@ -1,0 +1,2 @@
+data_type,domain,layer_type,layer_name,filepath,file_size_mb,resolution_x,resolution_y,crs,extent_xmin,extent_xmax,extent_ymin,extent_ymax,value_min,value_max,na_percent,datatype
+final_score,all_domains,NA,WRI_score,data/WRI_score.tif,2.01K,90,90,5070,-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,48.31953811645508,90.27864837646484,75.53,FLT4S
