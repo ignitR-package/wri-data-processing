@@ -1,4 +1,37 @@
-# Purpose: Initial exploration of raw WRI TIFF files
+# Purpose:
+#   Extract metadata from ALL raw WRI GeoTIFF layers and identify inconsistencies.
+#
+# What this script does:
+#   - Recursively scans the raw data directory for GeoTIFF files.
+#   - Extracts raster metadata for each file.
+#   - Classifies layers by data type, domain, and layer type.
+#   - Detects inconsistencies in resolution, CRS, and extent.
+#   - Saves:
+#       * full raw metadata (including failures),
+#       * clean metadata (successful + consistent),
+#       * a table of inconsistent files for follow-up.
+#
+# What this script does NOT do:
+#   - It does not modify raster data.
+#   - It does not convert files to COGs.
+#   - It does not create STAC metadata.
+#
+# Important behavior:
+#   - This script is safe to re-run.
+#   - Previously processed files are skipped using the saved metadata CSV.
+#
+# Why this script exists:
+#   This step establishes a complete and auditable inventory of the dataset
+#   before any transformations are performed.
+#
+# Inputs:
+#   - Raw WRI GeoTIFF files.
+#
+# Outputs:
+#   - config/all_layers_raw.csv
+#   - config/all_layers_metadata.csv
+#   - config/inconsistent_files_metadata.csv
+#   - summary CSVs by domain and data type
 
 # Load packages
 library(terra)

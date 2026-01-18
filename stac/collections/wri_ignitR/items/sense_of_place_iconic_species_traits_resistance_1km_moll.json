@@ -1,0 +1,59 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "sense_of_place_iconic_species_traits_resistance_1km_moll",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-147.4566, 31.3272],
+        [-78.5795, 31.3272],
+        [-147.111, 71.4122],
+        [-147.4566, 31.3272]
+      ]
+    ]
+  },
+  "bbox": [-147.4566, 31.3272, -78.5795, 71.4122],
+  "properties": {
+    "datetime": "2026-06-05T00:00:00Z",
+    "data_type": "indicator",
+    "domain": "iconic_species_old",
+    "layer_type": "resistance",
+    "cog:blocksize": 512,
+    "cog:compression": "DEFLATE",
+    "cog:overview_resampling": "AVERAGE",
+    "proj:epsg": null
+  },
+  "assets": {
+    "data": {
+      "href": "../cogs/indicator/iconic_species_old/sense_of_place_iconic_species_traits_resistance_1km_moll.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "COG"
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "collections/wri_ignitR/items/sense_of_place_iconic_species_traits_resistance_1km_moll.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "root",
+      "href": "catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collections/wri_ignitR/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collections/wri_ignitR/collection.json",
+      "type": "application/json"
+    }
+  ]
+}

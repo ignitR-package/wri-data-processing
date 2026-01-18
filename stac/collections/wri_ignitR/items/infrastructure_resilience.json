@@ -1,0 +1,59 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "infrastructure_resilience",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-146.2082, 19.1074],
+        [-101.3606, 31.8673],
+        [173.7109, 54.8056],
+        [-146.2082, 19.1074]
+      ]
+    ]
+  },
+  "bbox": [-146.2082, 19.1074, 173.7109, 54.8056],
+  "properties": {
+    "datetime": "2026-06-05T00:00:00Z",
+    "data_type": "aggregate",
+    "domain": "infrastructure",
+    "layer_type": "resilience",
+    "cog:blocksize": 512,
+    "cog:compression": "DEFLATE",
+    "cog:overview_resampling": "AVERAGE",
+    "proj:epsg": "5070"
+  },
+  "assets": {
+    "data": {
+      "href": "../cogs/aggregate/infrastructure/infrastructure_resilience.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "COG"
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "collections/wri_ignitR/items/infrastructure_resilience.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "root",
+      "href": "catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collections/wri_ignitR/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collections/wri_ignitR/collection.json",
+      "type": "application/json"
+    }
+  ]
+}

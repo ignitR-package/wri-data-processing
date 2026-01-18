@@ -1,5 +1,26 @@
-# Purpose: Test metadata extraction on a single WRI layer (00a = one-file version of 00b)
-
+# Purpose:
+#   Proof-of-concept script for extracting metadata from a single WRI GeoTIFF.
+#
+# What this script does:
+#   - Reads one GeoTIFF layer from disk.
+#   - Extracts basic raster metadata (dimensions, resolution, CRS, extent).
+#   - Computes simple value summaries (min, max, NA percent).
+#   - Classifies the layer by data type, domain, and layer type based on filename/path.
+#
+# What this script does NOT do:
+#   - It does not write any STAC files.
+#   - It does not modify or convert the raster.
+#   - It does not loop over multiple files.
+#
+# Why this script exists:
+#   This file is a small, safe test case used to develop and debug the metadata
+#   extraction logic before scaling up to all layers (00b).
+#
+# Inputs:
+#   - One GeoTIFF file on disk.
+#
+# Outputs:
+#   - Printed metadata to the console only.
 # Load packages
 library(terra)
 library(dplyr)

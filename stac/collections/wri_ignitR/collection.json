@@ -1,0 +1,39 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Collection",
+  "id": "wri_ignitR",
+  "description": "WRI raster layers (COGs) in one collection",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [-147.4566, 19.1074, 173.7109, 71.4125]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-06-05T00:00:00Z",
+          "2026-06-05T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "collections/wri_ignitR/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "catalog.json",
+      "type": "application/json"
+    }
+  ]
+}

@@ -50,3 +50,9 @@ rsconnect/
 
 # Data folder
 data/*
+
+# Cog files
+cogs/*
+
+# Test output
+test_output.cog.tif
