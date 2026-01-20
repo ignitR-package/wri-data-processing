@@ -1,5 +1,5 @@
 data_type,domain,layer_type,filepath,filename,file_size_mb,ncols,nrows,ncells,nlayers,resolution_x,resolution_y,crs,crs_full,extent_xmin,extent_xmax,extent_ymin,extent_ymax,value_min,value_max,value_mean,na_cells,na_percent,datatype,success,error
-final_score,all_domains,NA,data/WRI_score.tif,WRI_score.tif,  2.01K,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
+final_score,all_domains,NA,data/WRI_score.tif,WRI_score.tif,2.01K,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
             ELLIPSOID[""GRS 1980"",6378137,298.257222101,
@@ -39,7 +39,7 @@ final_score,all_domains,NA,data/WRI_score.tif,WRI_score.tif,  2.01K,52355,57865,
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,48.31953811645508,90.27864837646484,73.23167404516705,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,48.31953811645508,90.27864837646484,73.23167404516705,2288221416,75.53,FLT4S,TRUE,NA
 aggregate,air_quality,domain_score,data/air_quality/air_quality_domain_score.tif,air_quality_domain_score.tif,362.9,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -80,7 +80,7 @@ aggregate,air_quality,domain_score,data/air_quality/air_quality_domain_score.tif
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,50.208553314208984,96.315277099609375,75.7643864663165,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,50.208553314208984,96.315277099609375,75.7643864663165,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,air_quality,resilience,data/air_quality/air_quality_resilience.tif,air_quality_resilience.tif,383.9,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -121,7 +121,7 @@ aggregate,air_quality,resilience,data/air_quality/air_quality_resilience.tif,air
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.278840571641922,0.9263410568237305,0.5314150792696428,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.278840571641922,0.9263410568237304,0.5314150792696428,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,air_quality,resistance,data/air_quality/air_quality_resistance.tif,air_quality_resistance.tif,383.9,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -162,7 +162,7 @@ aggregate,air_quality,resistance,data/air_quality/air_quality_resistance.tif,air
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.278840571641922,0.9263410568237305,0.5314150792696428,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.278840571641922,0.9263410568237304,0.5314150792696428,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,air_quality,status,data/air_quality/air_quality_status.tif,air_quality_status.tif,217.86,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -203,7 +203,7 @@ aggregate,air_quality,status,data/air_quality/air_quality_status.tif,air_quality
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.4999999701976776,1,0.9838726525178904,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.4999999701976776,1,0.9838726525178904,2953637211,97.5,FLT4S,TRUE,NA
 indicator,air_quality,resistance,data/air_quality/indicators/air_quality_resistance_asthma.tif,air_quality_resistance_asthma.tif,164.43,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -244,7 +244,7 @@ indicator,air_quality,resistance,data/air_quality/indicators/air_quality_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.5382576645040233,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.5382576645040233,2953637211,97.5,FLT4S,TRUE,NA
 indicator,air_quality,resistance,data/air_quality/indicators/air_quality_resistance_copd.tif,air_quality_resistance_copd.tif,173.84,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -285,7 +285,7 @@ indicator,air_quality,resistance,data/air_quality/indicators/air_quality_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.6718849279105175,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.6718849279105175,2953637211,97.5,FLT4S,TRUE,NA
 indicator,air_quality,resistance,data/air_quality/indicators/air_quality_resistance_hospital_density.tif,air_quality_resistance_hospital_density.tif,448.32,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -326,7 +326,7 @@ indicator,air_quality,resistance,data/air_quality/indicators/air_quality_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,0.9998458027839661,0.06649668122191185,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,0.999845802783966,0.06649668122191185,2953637211,97.5,FLT4S,TRUE,NA
 indicator,air_quality,resistance,data/air_quality/indicators/air_quality_resistance_vulnerable_populations.tif,air_quality_resistance_vulnerable_populations.tif,180.09,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -367,7 +367,7 @@ indicator,air_quality,resistance,data/air_quality/indicators/air_quality_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.5634921995730863,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.5634921995730863,2953637211,97.5,FLT4S,TRUE,NA
 indicator,air_quality,resistance,data/air_quality/indicators/air_quality_resistance_vulnerable_workers.tif,air_quality_resistance_vulnerable_workers.tif,155.72,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -408,7 +408,7 @@ indicator,air_quality,resistance,data/air_quality/indicators/air_quality_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.8169439231421057,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.8169439231421057,2953637211,97.5,FLT4S,TRUE,NA
 indicator,air_quality,status,data/air_quality/indicators/air_quality_status_aqi_100.tif,air_quality_status_aqi_100.tif,219.22,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -449,7 +449,7 @@ indicator,air_quality,status,data/air_quality/indicators/air_quality_status_aqi_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.9709412395554677,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.9709412395554676,2953637211,97.5,FLT4S,TRUE,NA
 indicator,air_quality,status,data/air_quality/indicators/air_quality_status_aqi_300.tif,air_quality_status_aqi_300.tif,139.18,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -490,7 +490,7 @@ indicator,air_quality,status,data/air_quality/indicators/air_quality_status_aqi_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.23838868737220764,1,0.996804060553887,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.23838868737220764,1,0.996804060553887,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,communities,domain_score,data/communities/communities_domain_score.tif,communities_domain_score.tif,189.71,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -531,7 +531,7 @@ aggregate,communities,domain_score,data/communities/communities_domain_score.tif
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,44.78654861450195,100,76.41449445280678,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,44.78654861450195,100,76.41449445280678,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,communities,resilience,data/communities/communities_resilience.tif,communities_resilience.tif,189.85,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -572,7 +572,7 @@ aggregate,communities,resilience,data/communities/communities_resilience.tif,com
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.44786548614501953,1,0.7641449430588257,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.44786548614501953,1,0.7641449430588257,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,communities,resistance,data/communities/communities_resistance.tif,communities_resistance.tif,189.44,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -613,7 +613,7 @@ aggregate,communities,resistance,data/communities/communities_resistance.tif,com
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.1319587230682373,0.9161719679832458,0.5773244316020533,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.1319587230682373,0.9161719679832458,0.5773244316020533,2953637211,97.5,FLT4S,TRUE,NA
 indicator,communities,recovery,data/communities/indicators/communities_recovery_income.tif,communities_recovery_income.tif,182.09,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -654,7 +654,7 @@ indicator,communities,recovery,data/communities/indicators/communities_recovery_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.4800797690271267,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.4800797690271267,2953637211,97.5,FLT4S,TRUE,NA
 indicator,communities,recovery,data/communities/indicators/communities_recovery_incorporation.tif,communities_recovery_incorporation.tif,124.4,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -695,7 +695,7 @@ indicator,communities,recovery,data/communities/indicators/communities_recovery_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.0973060582937857,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.0973060582937857,2953637211,97.5,FLT4S,TRUE,NA
 indicator,communities,recovery,data/communities/indicators/communities_recovery_owners.tif,communities_recovery_owners.tif,183.47,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -736,7 +736,7 @@ indicator,communities,recovery,data/communities/indicators/communities_recovery_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.7701709970297006,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.7701709970297006,2953637211,97.5,FLT4S,TRUE,NA
 indicator,communities,resistance,data/communities/indicators/communities_resistance_age_65_plus.tif,communities_resistance_age_65_plus.tif,180.72,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -777,7 +777,7 @@ indicator,communities,resistance,data/communities/indicators/communities_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.7731518426023817,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.7731518426023817,2953637211,97.5,FLT4S,TRUE,NA
 indicator,communities,resistance,data/communities/indicators/communities_resistance_cwpps.tif,communities_resistance_cwpps.tif,126.84,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -818,7 +818,7 @@ indicator,communities,resistance,data/communities/indicators/communities_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.7996919122105826,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.7996919122105826,2953637211,97.5,FLT4S,TRUE,NA
 indicator,communities,resistance,data/communities/indicators/communities_resistance_disability.tif,communities_resistance_disability.tif,177.4,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -859,7 +859,7 @@ indicator,communities,resistance,data/communities/indicators/communities_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.8327551625798362,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.8327551625798362,2953637211,97.5,FLT4S,TRUE,NA
 indicator,communities,resistance,data/communities/indicators/communities_resistance_egress.tif,communities_resistance_egress.tif,130.74,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -900,7 +900,7 @@ indicator,communities,resistance,data/communities/indicators/communities_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.08346628477253426,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.08346628477253426,2953637211,97.5,FLT4S,TRUE,NA
 indicator,communities,resistance,data/communities/indicators/communities_resistance_firewise_communities.tif,communities_resistance_firewise_communities.tif,122.58,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -941,7 +941,7 @@ indicator,communities,resistance,data/communities/indicators/communities_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.5878902684284195,2957585914,97.63,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.5878902684284195,2957585914,97.63,FLT4S,TRUE,NA
 indicator,communities,resistance,data/communities/indicators/communities_resistance_no_vehicle.tif,communities_resistance_no_vehicle.tif,164.71,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -982,7 +982,7 @@ indicator,communities,resistance,data/communities/indicators/communities_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.9614759288679409,2957585914,97.63,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.9614759288679408,2957585914,97.63,FLT4S,TRUE,NA
 indicator,communities,resistance,data/communities/indicators/communities_resistance_volunteer_fire_stations.tif,communities_resistance_volunteer_fire_stations.tif,155.74,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1023,7 +1023,7 @@ indicator,communities,resistance,data/communities/indicators/communities_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.050927157364521095,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.05092715736452109,2953637211,97.5,FLT4S,TRUE,NA
 indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructure_resistance_building_codes.tif,infrastructure_resistance_building_codes.tif,130.31,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1064,7 +1064,7 @@ indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructur
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,0.9196428656578064,0.37507694399673636,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,0.9196428656578064,0.3750769439967363,2953637211,97.5,FLT4S,TRUE,NA
 indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructure_resistance_d_space.tif,infrastructure_resistance_d_space.tif,115.14,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1105,7 +1105,7 @@ indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructur
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.9139451589154707,3021339577,99.73,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.9139451589154708,3021339577,99.73,FLT4S,TRUE,NA
 indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructure_resistance_egress.tif,infrastructure_resistance_egress.tif,130.47,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1146,7 +1146,7 @@ indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructur
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.07824733158789195,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.07824733158789195,2953637211,97.5,FLT4S,TRUE,NA
 indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructure_resistance_fire_resource_density.tif,infrastructure_resistance_fire_resource_density.tif,443.7,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1187,7 +1187,7 @@ indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructur
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,4.584412831687803e-16,0.9999092817306519,0.14093537690562985,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,4.584412831687803e-16,0.999909281730652,0.14093537690562985,2953637211,97.5,FLT4S,TRUE,NA
 indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructure_resistance_wildland_urban_interface.tif,infrastructure_resistance_wildland_urban_interface.tif,134.79,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1228,7 +1228,7 @@ indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructur
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.8046199828307226,2954729178,97.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.8046199828307226,2954729178,97.53,FLT4S,TRUE,NA
 indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructure_resistance_wildland_urban_interface_test.tif,infrastructure_resistance_wildland_urban_interface_test.tif,133.7,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1269,7 +1269,7 @@ indicator,infrastructure,resistance,data/infrastructure/indicators/infrastructur
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.8026985154429757,2953638092,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.8026985154429757,2953638092,97.5,FLT4S,TRUE,NA
 aggregate,infrastructure,domain_score,data/infrastructure/infrastructure_domain_score.tif,infrastructure_domain_score.tif,402.27,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1310,7 +1310,7 @@ aggregate,infrastructure,domain_score,data/infrastructure/infrastructure_domain_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,9.519514083862305,100,60.33076130990678,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,9.519514083862305,100,60.33076130990678,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,infrastructure,resilience,data/infrastructure/infrastructure_resilience.tif,infrastructure_resilience.tif,400.04,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1351,7 +1351,7 @@ aggregate,infrastructure,resilience,data/infrastructure/infrastructure_resilienc
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.09519513696432114,1,0.6033076131003222,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.09519513696432114,1,0.6033076131003222,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,infrastructure,resistance,data/infrastructure/infrastructure_resistance.tif,infrastructure_resistance.tif,417.32,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1392,7 +1392,7 @@ aggregate,infrastructure,resistance,data/infrastructure/infrastructure_resistanc
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,1.9223993749598603e-16,0.9839104413986206,0.3598918970401599,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,1.9223993749598603e-16,0.9839104413986206,0.3598918970401599,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,infrastructure,status,data/infrastructure/infrastructure_status.tif,infrastructure_status.tif,128.76,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1433,7 +1433,7 @@ aggregate,infrastructure,status,data/infrastructure/infrastructure_status.tif,in
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,1,1,1,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,1,1,1,2953637211,97.5,FLT4S,TRUE,NA
 indicator,livelihoods,recovery,data/livelihoods/indicators/livelihoods_recovery_diversity_of_jobs.tif,livelihoods_recovery_diversity_of_jobs.tif,156.04,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1474,7 +1474,7 @@ indicator,livelihoods,recovery,data/livelihoods/indicators/livelihoods_recovery_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,0.9872159361839294,0.785701266302994,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,0.9872159361839294,0.785701266302994,2953637211,97.5,FLT4S,TRUE,NA
 indicator,livelihoods,resistance,data/livelihoods/indicators/livelihoods_resistance_job_vulnerability.tif,livelihoods_resistance_job_vulnerability.tif,155.45,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1515,7 +1515,7 @@ indicator,livelihoods,resistance,data/livelihoods/indicators/livelihoods_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.7537566080483081,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.7537566080483081,2953637211,97.5,FLT4S,TRUE,NA
 indicator,livelihoods,status,data/livelihoods/indicators/livelihoods_status_housing_burden.tif,livelihoods_status_housing_burden.tif,183.59,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1556,7 +1556,7 @@ indicator,livelihoods,status,data/livelihoods/indicators/livelihoods_status_hous
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.7560177629804833,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.7560177629804833,2953637211,97.5,FLT4S,TRUE,NA
 indicator,livelihoods,status,data/livelihoods/indicators/livelihoods_status_median_income.tif,livelihoods_status_median_income.tif,183.59,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1597,7 +1597,7 @@ indicator,livelihoods,status,data/livelihoods/indicators/livelihoods_status_medi
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.29986580986977296,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.29986580986977296,2953637211,97.5,FLT4S,TRUE,NA
 indicator,livelihoods,status,data/livelihoods/indicators/livelihoods_status_unemployment.tif,livelihoods_status_unemployment.tif,151.14,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1638,7 +1638,7 @@ indicator,livelihoods,status,data/livelihoods/indicators/livelihoods_status_unem
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.6815839049713506,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.6815839049713506,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,livelihoods,domain_score,data/livelihoods/livelihoods_domain_score.tif,livelihoods_domain_score.tif,183.53,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1679,7 +1679,7 @@ aggregate,livelihoods,domain_score,data/livelihoods/livelihoods_domain_score.tif
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,44.15204620361328,98.50019073486328,76.41964502114358,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,44.15204620361328,98.50019073486328,76.41964502114358,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,livelihoods,resilience,data/livelihoods/livelihoods_resilience.tif,livelihoods_resilience.tif,155.38,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1720,7 +1720,7 @@ aggregate,livelihoods,resilience,data/livelihoods/livelihoods_resilience.tif,liv
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.24744752049446106,1,0.9492370739389282,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.24744752049446103,1,0.9492370739389282,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,livelihoods,resistance,data/livelihoods/livelihoods_resistance.tif,livelihoods_resistance.tif,155.45,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1761,7 +1761,7 @@ aggregate,livelihoods,resistance,data/livelihoods/livelihoods_resistance.tif,liv
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.7537566080483081,2953637211,97.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.7537566080483081,2953637211,97.5,FLT4S,TRUE,NA
 aggregate,livelihoods,status,data/livelihoods/livelihoods_status.tif,livelihoods_status.tif,183.93,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -1802,8 +1802,8 @@ aggregate,livelihoods,status,data/livelihoods/livelihoods_status.tif,livelihoods
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.06737171113491058,0.98613739013671875,0.5791558265820045,2953637211,97.5,FLT4S,TRUE,NA
-indicator,retro_2005,status,data/livelihoods/retro_2005/indicators/livelihoods_status_housing_burden.tif,livelihoods_status_housing_burden.tif, 92.55,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.06737171113491058,0.98613739013671875,0.5791558265820045,2953637211,97.5,FLT4S,TRUE,NA
+indicator,retro_2005,status,data/livelihoods/retro_2005/indicators/livelihoods_status_housing_burden.tif,livelihoods_status_housing_burden.tif,92.55,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
             ELLIPSOID[""GRS 1980"",6378137,298.257222101,
@@ -1843,8 +1843,8 @@ indicator,retro_2005,status,data/livelihoods/retro_2005/indicators/livelihoods_s
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,NA,NA,NA,3029522075,100,FLT4S,TRUE,NA
-aggregate,natural_habitats,domain_score,data/natural_habitats/natural_habitats_domain_score.tif,natural_habitats_domain_score.tif,  2.71K,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,NA,NA,NA,3029522075,100,FLT4S,TRUE,NA
+aggregate,natural_habitats,domain_score,data/natural_habitats/natural_habitats_domain_score.tif,natural_habitats_domain_score.tif,2.71K,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
             ELLIPSOID[""GRS 1980"",6378137,298.257222101,
@@ -1884,8 +1884,8 @@ aggregate,natural_habitats,domain_score,data/natural_habitats/natural_habitats_d
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,24.814918518066406,99.99933624267578,74.81855696679001,2334865616,77.07,FLT4S,TRUE,NA
-aggregate,natural_habitats,resilience,data/natural_habitats/natural_habitats_resilience.tif,natural_habitats_resilience.tif,  2.79K,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,24.814918518066406,99.99933624267578,74.81855696679001,2334865616,77.07,FLT4S,TRUE,NA
+aggregate,natural_habitats,resilience,data/natural_habitats/natural_habitats_resilience.tif,natural_habitats_resilience.tif,2.79K,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
             ELLIPSOID[""GRS 1980"",6378137,298.257222101,
@@ -1925,8 +1925,8 @@ aggregate,natural_habitats,resilience,data/natural_habitats/natural_habitats_res
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.1312444508075714,1,0.8020909678047031,2334865616,77.07,FLT4S,TRUE,NA
-aggregate,natural_habitats,resistance,data/natural_habitats/natural_habitats_resistance.tif,natural_habitats_resistance.tif,  2.86K,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.1312444508075714,1,0.8020909678047031,2334865616,77.07,FLT4S,TRUE,NA
+aggregate,natural_habitats,resistance,data/natural_habitats/natural_habitats_resistance.tif,natural_habitats_resistance.tif,2.86K,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
             ELLIPSOID[""GRS 1980"",6378137,298.257222101,
@@ -1966,7 +1966,7 @@ aggregate,natural_habitats,resistance,data/natural_habitats/natural_habitats_res
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.021818773820996284,1,0.5593179808218172,2334865616,77.07,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.02181877382099628,1,0.5593179808218172,2334865616,77.07,FLT4S,TRUE,NA
 aggregate,natural_habitats,status,data/natural_habitats/natural_habitats_status.tif,natural_habitats_status.tif,227.73,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2007,8 +2007,8 @@ aggregate,natural_habitats,status,data/natural_habitats/natural_habitats_status.
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.25599804520606995,1,0.6942801730444058,2334865616,77.07,FLT4S,TRUE,NA
-indicator,iconic_species_old,NA,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/recovery_species_1km_moll.tif,recovery_species_1km_moll.tif,  6.27,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.25599804520606995,1,0.6942801730444058,2334865616,77.07,FLT4S,TRUE,NA
+indicator,iconic_species_old,NA,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/recovery_species_1km_moll.tif,recovery_species_1km_moll.tif,6.27,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2035,8 +2035,8 @@ indicator,iconic_species_old,NA,data/sense_of_place/archive/iconic_species_old/i
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.19699238240718842,0.5779323577880859,0.36721770957733646,19631615,76.63,FLT4S,TRUE,NA
-indicator,iconic_species_old,NA,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/resistance_species_1km_moll.tif,resistance_species_1km_moll.tif,  6.29,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.1969923824071884,0.5779323577880859,0.36721770957733646,19631615,76.63,FLT4S,TRUE,NA
+indicator,iconic_species_old,NA,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/resistance_species_1km_moll.tif,resistance_species_1km_moll.tif,6.29,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2063,8 +2063,8 @@ indicator,iconic_species_old,NA,data/sense_of_place/archive/iconic_species_old/i
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.0016362862661480904,0.7398331165313721,0.3906877214424339,19631615,76.63,FLT4S,TRUE,NA
-indicator,iconic_species_old,recovery,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/sense_of_place_iconic_species_area_recovery_1km_moll.tif,sense_of_place_iconic_species_area_recovery_1km_moll.tif,  6.29,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.00163628626614809,0.7398331165313721,0.3906877214424339,19631615,76.63,FLT4S,TRUE,NA
+indicator,iconic_species_old,recovery,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/sense_of_place_iconic_species_area_recovery_1km_moll.tif,sense_of_place_iconic_species_area_recovery_1km_moll.tif,6.29,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2091,8 +2091,8 @@ indicator,iconic_species_old,recovery,data/sense_of_place/archive/iconic_species
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.002031603828072548,0.5348392724990845,0.14914824244148844,19631615,76.63,FLT4S,TRUE,NA
-indicator,iconic_species_old,status,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/sense_of_place_iconic_species_status_1km_moll_75_extinction_rescaled.tif,sense_of_place_iconic_species_status_1km_moll_75_extinction_rescaled.tif,  5.21,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.00203160382807254,0.5348392724990845,0.14914824244148844,19631615,76.63,FLT4S,TRUE,NA
+indicator,iconic_species_old,status,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/sense_of_place_iconic_species_status_1km_moll_75_extinction_rescaled.tif,sense_of_place_iconic_species_status_1km_moll_75_extinction_rescaled.tif,5.21,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2119,8 +2119,8 @@ indicator,iconic_species_old,status,data/sense_of_place/archive/iconic_species_o
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.2888889014720917,1,0.9409189264234759,19631616,76.63,FLT4S,TRUE,NA
-indicator,iconic_species_old,status,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/sense_of_place_iconic_species_status_1km_moll_no_extinction.tif,sense_of_place_iconic_species_status_1km_moll_no_extinction.tif,  5.17,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.2888889014720917,1,0.940918926423476,19631616,76.63,FLT4S,TRUE,NA
+indicator,iconic_species_old,status,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/sense_of_place_iconic_species_status_1km_moll_no_extinction.tif,sense_of_place_iconic_species_status_1km_moll_no_extinction.tif,5.17,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2147,8 +2147,8 @@ indicator,iconic_species_old,status,data/sense_of_place/archive/iconic_species_o
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.46666666865348816,1,0.9556891977834983,19631616,76.63,FLT4S,TRUE,NA
-indicator,iconic_species_old,recovery,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/sense_of_place_iconic_species_traits_recovery_1km_moll.tif,sense_of_place_iconic_species_traits_recovery_1km_moll.tif,  6.27,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.46666666865348816,1,0.9556891977834984,19631616,76.63,FLT4S,TRUE,NA
+indicator,iconic_species_old,recovery,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/sense_of_place_iconic_species_traits_recovery_1km_moll.tif,sense_of_place_iconic_species_traits_recovery_1km_moll.tif,6.27,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2175,8 +2175,8 @@ indicator,iconic_species_old,recovery,data/sense_of_place/archive/iconic_species
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.382700651884079,0.7946666479110718,0.5852871652264421,19631615,76.63,FLT4S,TRUE,NA
-indicator,iconic_species_old,resistance,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/sense_of_place_iconic_species_traits_resistance_1km_moll.tif,sense_of_place_iconic_species_traits_resistance_1km_moll.tif,  6.29,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.382700651884079,0.7946666479110718,0.5852871652264421,19631615,76.63,FLT4S,TRUE,NA
+indicator,iconic_species_old,resistance,data/sense_of_place/archive/iconic_species_old/indicators/moll_files/sense_of_place_iconic_species_traits_resistance_1km_moll.tif,sense_of_place_iconic_species_traits_resistance_1km_moll.tif,6.29,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2203,7 +2203,7 @@ indicator,iconic_species_old,resistance,data/sense_of_place/archive/iconic_speci
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.0016362862661480904,0.7398331165313721,0.3906877214424339,19631615,76.63,FLT4S,TRUE,NA
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.00163628626614809,0.7398331165313721,0.3906877214424339,19631615,76.63,FLT4S,TRUE,NA
 indicator,iconic_places,recovery,data/sense_of_place/iconic_places/indicators/sense_of_place_iconic_places_recovery_degree_of_protection.tif,sense_of_place_iconic_places_recovery_degree_of_protection.tif,100.55,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2244,7 +2244,7 @@ indicator,iconic_places,recovery,data/sense_of_place/iconic_places/indicators/se
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.8143441053836855,3025165952,99.86,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.8143441053836855,3025165952,99.86,FLT4S,TRUE,NA
 indicator,iconic_places,recovery,data/sense_of_place/iconic_places/indicators/sense_of_place_iconic_places_recovery_national_parks.tif,sense_of_place_iconic_places_recovery_national_parks.tif,121.8,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2285,7 +2285,7 @@ indicator,iconic_places,recovery,data/sense_of_place/iconic_places/indicators/se
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,2.246815256512491e-6,0.9461938142776489,0.582350530770549,2987472802,98.61,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,2.246815256512491e-6,0.9461938142776488,0.582350530770549,2987472802,98.61,FLT4S,TRUE,NA
 indicator,iconic_places,resistance,data/sense_of_place/iconic_places/indicators/sense_of_place_iconic_places_resistance_egress.tif,sense_of_place_iconic_places_resistance_egress.tif,100.25,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2326,7 +2326,7 @@ indicator,iconic_places,resistance,data/sense_of_place/iconic_places/indicators/
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.021789257461687857,3025165952,99.86,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.02178925746168785,3025165952,99.86,FLT4S,TRUE,NA
 indicator,iconic_places,resistance,data/sense_of_place/iconic_places/indicators/sense_of_place_iconic_places_resistance_fire_resource_density.tif,sense_of_place_iconic_places_resistance_fire_resource_density.tif,102.47,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2367,7 +2367,7 @@ indicator,iconic_places,resistance,data/sense_of_place/iconic_places/indicators/
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,2.0399291315698065e-5,0.99895179271698,0.0746315189648268,3025165952,99.86,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,2.0399291315698065e-5,0.99895179271698,0.0746315189648268,3025165952,99.86,FLT4S,TRUE,NA
 indicator,iconic_places,resistance,data/sense_of_place/iconic_places/indicators/sense_of_place_iconic_places_resistance_national_parks.tif,sense_of_place_iconic_places_resistance_national_parks.tif,121.8,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2408,7 +2408,7 @@ indicator,iconic_places,resistance,data/sense_of_place/iconic_places/indicators/
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.3085192143917084,0.7692509293556213,0.6502820739530383,2987472802,98.61,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.3085192143917084,0.7692509293556213,0.6502820739530383,2987472802,98.61,FLT4S,TRUE,NA
 indicator,iconic_places,resistance,data/sense_of_place/iconic_places/indicators/sense_of_place_iconic_places_resistance_structures.tif,sense_of_place_iconic_places_resistance_structures.tif,102.47,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2449,7 +2449,7 @@ indicator,iconic_places,resistance,data/sense_of_place/iconic_places/indicators/
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,2.693487040232867e-4,0.9996505975723267,0.34802838606152564,3025165952,99.86,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,2.693487040232867e-4,0.9996505975723268,0.34802838606152564,3025165952,99.86,FLT4S,TRUE,NA
 indicator,iconic_places,resistance,data/sense_of_place/iconic_places/indicators/sense_of_place_iconic_places_resistance_wui.tif,sense_of_place_iconic_places_resistance_wui.tif,102.13,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2490,7 +2490,7 @@ indicator,iconic_places,resistance,data/sense_of_place/iconic_places/indicators/
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.9476643832762727,3025165952,99.86,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.9476643832762728,3025165952,99.86,FLT4S,TRUE,NA
 indicator,iconic_places,status,data/sense_of_place/iconic_places/indicators/sense_of_place_iconic_places_status_presence.tif,sense_of_place_iconic_places_status_presence.tif,123.24,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2531,7 +2531,7 @@ indicator,iconic_places,status,data/sense_of_place/iconic_places/indicators/sens
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,1,1,1,2984104406,98.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,1,1,1,2984104406,98.5,FLT4S,TRUE,NA
 aggregate,sense_of_place,domain_score,data/sense_of_place/iconic_places/sense_of_place_iconic_places_domain_score.tif,sense_of_place_iconic_places_domain_score.tif,127.16,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2572,7 +2572,7 @@ aggregate,sense_of_place,domain_score,data/sense_of_place/iconic_places/sense_of
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.06410662829875946,100,85.72691729698464,2984104406,98.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.06410662829875946,100,85.72691729698464,2984104406,98.5,FLT4S,TRUE,NA
 aggregate,sense_of_place,resilience,data/sense_of_place/iconic_places/sense_of_place_iconic_places_resilience.tif,sense_of_place_iconic_places_resilience.tif,127.16,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2613,7 +2613,7 @@ aggregate,sense_of_place,resilience,data/sense_of_place/iconic_places/sense_of_p
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,6.410662899725139e-4,1,0.8572691653186488,2984104406,98.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,6.410662899725139e-4,1,0.8572691653186488,2984104406,98.5,FLT4S,TRUE,NA
 aggregate,sense_of_place,resistance,data/sense_of_place/iconic_places/sense_of_place_iconic_places_resistance.tif,sense_of_place_iconic_places_resistance.tif,127.34,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2654,7 +2654,7 @@ aggregate,sense_of_place,resistance,data/sense_of_place/iconic_places/sense_of_p
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,2.693487040232867e-4,0.9996505975723267,0.6250802695847558,2984104406,98.5,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,2.693487040232867e-4,0.9996505975723268,0.6250802695847558,2984104406,98.5,FLT4S,TRUE,NA
 indicator,iconic_species,NA,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_area_recovery.tif,sense_of_place_iconic_species_area_recovery.tif,457.56,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2695,8 +2695,8 @@ indicator,iconic_species,NA,data/sense_of_place/iconic_species/indicators/sense_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.002031603828072548,0.5348392724990845,0.1491831294580809,2290641861,75.61,FLT4S,TRUE,NA
-indicator,iconic_species,recovery,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_area_recovery_1km_moll.tif,sense_of_place_iconic_species_area_recovery_1km_moll.tif,  6.25,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.00203160382807254,0.5348392724990845,0.1491831294580809,2290641861,75.61,FLT4S,TRUE,NA
+indicator,iconic_species,recovery,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_area_recovery_1km_moll.tif,sense_of_place_iconic_species_area_recovery_1km_moll.tif,6.25,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2723,8 +2723,8 @@ indicator,iconic_species,recovery,data/sense_of_place/iconic_species/indicators/
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.002031603828072548,0.5348392724990845,0.1490702100514943,19631616,76.63,FLT4S,TRUE,NA
-indicator,iconic_species,status,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_status_1km_moll_75_extinction_rescaled.tif,sense_of_place_iconic_species_status_1km_moll_75_extinction_rescaled.tif,  5.21,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.00203160382807254,0.5348392724990845,0.1490702100514943,19631616,76.63,FLT4S,TRUE,NA
+indicator,iconic_species,status,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_status_1km_moll_75_extinction_rescaled.tif,sense_of_place_iconic_species_status_1km_moll_75_extinction_rescaled.tif,5.21,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2751,8 +2751,8 @@ indicator,iconic_species,status,data/sense_of_place/iconic_species/indicators/se
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.2888889014720917,1,0.9409189264234759,19631616,76.63,FLT4S,TRUE,NA
-indicator,iconic_species,status,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_status_1km_moll_no_extinction.tif,sense_of_place_iconic_species_status_1km_moll_no_extinction.tif,  5.17,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.2888889014720917,1,0.940918926423476,19631616,76.63,FLT4S,TRUE,NA
+indicator,iconic_species,status,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_status_1km_moll_no_extinction.tif,sense_of_place_iconic_species_status_1km_moll_no_extinction.tif,5.17,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2779,7 +2779,7 @@ indicator,iconic_species,status,data/sense_of_place/iconic_species/indicators/se
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.46666666865348816,1,0.9556891977834983,19631616,76.63,FLT4S,TRUE,NA
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.46666666865348816,1,0.9556891977834984,19631616,76.63,FLT4S,TRUE,NA
 indicator,iconic_species,status,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_status_75_extinction_rescaled.tif,sense_of_place_iconic_species_status_75_extinction_rescaled.tif,364.54,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2820,7 +2820,7 @@ indicator,iconic_species,status,data/sense_of_place/iconic_species/indicators/se
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.2888889014720917,1,0.9409943593787542,2290641861,75.61,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.2888889014720917,1,0.9409943593787542,2290641861,75.61,FLT4S,TRUE,NA
 indicator,iconic_species,NA,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_traits_recovery.tif,sense_of_place_iconic_species_traits_recovery.tif,448.84,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2861,8 +2861,8 @@ indicator,iconic_species,NA,data/sense_of_place/iconic_species/indicators/sense_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.3851028084754944,0.7946520447731018,0.5837747260189649,2290641861,75.61,FLT4S,TRUE,NA
-indicator,iconic_species,recovery,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_traits_recovery_1km_moll.tif,sense_of_place_iconic_species_traits_recovery_1km_moll.tif,  6.23,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.3851028084754944,0.7946520447731018,0.5837747260189649,2290641861,75.61,FLT4S,TRUE,NA
+indicator,iconic_species,recovery,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_traits_recovery_1km_moll.tif,sense_of_place_iconic_species_traits_recovery_1km_moll.tif,6.23,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2889,7 +2889,7 @@ indicator,iconic_species,recovery,data/sense_of_place/iconic_species/indicators/
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.3851028084754944,0.7946520447731018,0.5837754137666272,19631616,76.63,FLT4S,TRUE,NA
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.3851028084754944,0.7946520447731018,0.5837754137666272,19631616,76.63,FLT4S,TRUE,NA
 indicator,iconic_species,NA,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_traits_resistance.tif,sense_of_place_iconic_species_traits_resistance.tif,457.49,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2930,8 +2930,8 @@ indicator,iconic_species,NA,data/sense_of_place/iconic_species/indicators/sense_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.0026078312657773495,0.7398331165313721,0.38955421263337653,2290641861,75.61,FLT4S,TRUE,NA
-indicator,iconic_species,resistance,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_traits_resistance_1km_moll.tif,sense_of_place_iconic_species_traits_resistance_1km_moll.tif,  6.25,6261,4092,25620012,1,1000,999.9999999999999,NA,"PROJCRS[""unknown"",
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.00260783126577734,0.7398331165313721,0.3895542126333766,2290641861,75.61,FLT4S,TRUE,NA
+indicator,iconic_species,resistance,data/sense_of_place/iconic_species/indicators/sense_of_place_iconic_species_traits_resistance_1km_moll.tif,sense_of_place_iconic_species_traits_resistance_1km_moll.tif,6.25,6261,4092,25620012,1,1000,1000,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
             ELLIPSOID[""WGS 84"",6378137,298.257223563,
@@ -2958,7 +2958,7 @@ indicator,iconic_species,resistance,data/sense_of_place/iconic_species/indicator
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.9468551595,0.0026078312657773495,0.7398331165313721,0.3896826665734764,19631616,76.63,FLT4S,TRUE,NA
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7142959.723543646,3798809.94685516,7890809.94685516,0.00260783126577734,0.7398331165313721,0.3896826665734764,19631616,76.63,FLT4S,TRUE,NA
 aggregate,sense_of_place,domain_score,data/sense_of_place/iconic_species/sense_of_place_iconic_species_domain_score.tif,sense_of_place_iconic_species_domain_score.tif,428.31,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -2999,7 +2999,7 @@ aggregate,sense_of_place,domain_score,data/sense_of_place/iconic_species/sense_o
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,45.093021392822266,91.57266998291016,77.71119081615812,2290641861,75.61,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,45.093021392822266,91.57266998291016,77.71119081615812,2290641861,75.61,FLT4S,TRUE,NA
 aggregate,sense_of_place,resilience,data/sense_of_place/iconic_species/sense_of_place_iconic_species_resilience.tif,sense_of_place_iconic_species_resilience.tif,443.03,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3040,7 +3040,7 @@ aggregate,sense_of_place,resilience,data/sense_of_place/iconic_species/sense_of_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.2630224823951721,0.8314534425735474,0.6132294729475817,2290641861,75.61,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.2630224823951721,0.8314534425735474,0.6132294729475817,2290641861,75.61,FLT4S,TRUE,NA
 aggregate,sense_of_place,resistance,data/sense_of_place/iconic_species/sense_of_place_iconic_species_resistance.tif,sense_of_place_iconic_species_resistance.tif,457.49,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3081,7 +3081,7 @@ aggregate,sense_of_place,resistance,data/sense_of_place/iconic_species/sense_of_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.0026078312657773495,0.7398331165313721,0.38955421263337653,2290641861,75.61,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.00260783126577734,0.7398331165313721,0.3895542126333766,2290641861,75.61,FLT4S,TRUE,NA
 aggregate,sense_of_place,status,data/sense_of_place/iconic_species/sense_of_place_iconic_species_status.tif,sense_of_place_iconic_species_status.tif,364.54,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3122,7 +3122,7 @@ aggregate,sense_of_place,status,data/sense_of_place/iconic_species/sense_of_plac
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.2888889014720917,1,0.9409943593787542,2290641861,75.61,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.2888889014720917,1,0.9409943593787542,2290641861,75.61,FLT4S,TRUE,NA
 indicator,species,recovery,data/species/indicators/species_recovery_range_area.tif,species_recovery_range_area.tif,984,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3163,7 +3163,7 @@ indicator,species,recovery,data/species/indicators/species_recovery_range_area.t
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.17577123641967773,0.6732625961303711,0.4595229875470583,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.1757712364196777,0.6732625961303711,0.4595229875470583,2288221416,75.53,FLT4S,TRUE,NA
 indicator,species,recovery,data/species/indicators/species_recovery_traits.tif,species_recovery_traits.tif,962.11,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3204,7 +3204,7 @@ indicator,species,recovery,data/species/indicators/species_recovery_traits.tif,s
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.5371226668357849,0.6790989637374878,0.6447420296360155,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.5371226668357849,0.6790989637374878,0.6447420296360155,2288221416,75.53,FLT4S,TRUE,NA
 indicator,species,resistance,data/species/indicators/species_resistance_traits.tif,species_resistance_traits.tif,955.23,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3245,7 +3245,7 @@ indicator,species,resistance,data/species/indicators/species_resistance_traits.t
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.41202789545059204,0.6549476385116577,0.4586680009210178,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.412027895450592,0.6549476385116577,0.4586680009210178,2288221416,75.53,FLT4S,TRUE,NA
 indicator,species,NA,data/species/indicators/species_status.tif,species_status.tif,740.38,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3286,7 +3286,7 @@ indicator,species,NA,data/species/indicators/species_status.tif,species_status.t
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.7878788113594055,0.9763157963752747,0.9533325781654676,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.7878788113594055,0.9763157963752748,0.9533325781654676,2288221416,75.53,FLT4S,TRUE,NA
 aggregate,species,domain_score,data/species/species_domain_score.tif,species_domain_score.tif,961.72,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3327,7 +3327,7 @@ aggregate,species,domain_score,data/species/species_domain_score.tif,species_dom
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,77.112701416015625,88.44257354736328,85.53812374656228,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,77.112701416015625,88.44257354736328,85.53812374656228,2288221416,75.53,FLT4S,TRUE,NA
 aggregate,species,resilience,data/species/species_resilience.tif,species_resilience.tif,967.14,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3368,7 +3368,7 @@ aggregate,species,resilience,data/species/species_resilience.tif,species_resilie
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.6704960465431213,0.850983738899231,0.7574298973528325,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.6704960465431213,0.850983738899231,0.7574298973528325,2288221416,75.53,FLT4S,TRUE,NA
 aggregate,species,resistance,data/species/species_resistance.tif,species_resistance.tif,955.23,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3409,7 +3409,7 @@ aggregate,species,resistance,data/species/species_resistance.tif,species_resista
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.41202789545059204,0.6549476385116577,0.4586680009210178,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.412027895450592,0.6549476385116577,0.4586680009210178,2288221416,75.53,FLT4S,TRUE,NA
 aggregate,species,status,data/species/species_status.tif,species_status.tif,740.38,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3450,7 +3450,7 @@ aggregate,species,status,data/species/species_status.tif,species_status.tif,740.
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0.7878788113594055,0.9763157963752747,0.9533325781654676,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0.7878788113594055,0.9763157963752748,0.9533325781654676,2288221416,75.53,FLT4S,TRUE,NA
 indicator,water,NA,data/water/indicators/archive/drought_plan_scores.tif,drought_plan_scores.tif,166.48,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3491,7 +3491,7 @@ indicator,water,NA,data/water/indicators/archive/drought_plan_scores.tif,drought
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,0.8333333134651184,0.46775517411506745,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,0.8333333134651184,0.46775517411506745,2288221416,75.53,FLT4S,TRUE,NA
 indicator,water,status,data/water/indicators/archive/streamflow_status_scores_2024.tif,streamflow_status_scores_2024.tif,246.12,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3532,7 +3532,7 @@ indicator,water,status,data/water/indicators/archive/streamflow_status_scores_20
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.7241449844728364,2289220883,75.56,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.7241449844728364,2289220883,75.56,FLT4S,TRUE,NA
 indicator,water,status,data/water/indicators/archive/streamflow_status_scores_2024_moll_not_needed.tif,streamflow_status_scores_2024_moll_not_needed.tif,242.3,69563,45467,3162820921,1,90,89.99999999999999,NA,"PROJCRS[""unknown"",
     BASEGEOGCRS[""unknown"",
         DATUM[""World Geodetic System 1984"",
@@ -3560,7 +3560,7 @@ indicator,water,status,data/water/indicators/archive/streamflow_status_scores_20
         AXIS[""(N)"",north,
             ORDER[2],
             LENGTHUNIT[""metre"",1,
-                ID[""EPSG"",9001]]]]",-13403959.723543646,-7143289.723543646,3798809.94685516,7890839.9468551595,0,1,0.7245299824923568,2423149699,76.61,FLT4S,TRUE,NA
+                ID[""EPSG"",9001]]]]",-13403959.723543646,-7143289.723543646,3798809.94685516,7890839.94685516,0,1,0.7245299824923568,2423149699,76.61,FLT4S,TRUE,NA
 indicator,water,status,data/water/indicators/archive/streamflow_status_scores_2024_old.tif,streamflow_status_scores_2024_old.tif,224.23,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3601,7 +3601,7 @@ indicator,water,status,data/water/indicators/archive/streamflow_status_scores_20
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.8076313183156091,2289220883,75.56,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.8076313183156091,2289220883,75.56,FLT4S,TRUE,NA
 indicator,water,resistance,data/water/indicators/archive/water_resistance_water_treatment.tif,water_resistance_water_treatment.tif,226.62,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3642,7 +3642,7 @@ indicator,water,resistance,data/water/indicators/archive/water_resistance_water_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,0.772977352142334,0.08211272757318039,2464742970,81.36,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,0.772977352142334,0.08211272757318039,2464742970,81.36,FLT4S,TRUE,NA
 indicator,water,resistance,data/water/indicators/archive/water_resistance_water_treatment_masked.tif,water_resistance_water_treatment_masked.tif,147.84,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3683,7 +3683,7 @@ indicator,water,resistance,data/water/indicators/archive/water_resistance_water_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,0.772977352142334,0.13716580222057206,2957592139,97.63,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,0.772977352142334,0.13716580222057206,2957592139,97.63,FLT4S,TRUE,NA
 indicator,water,status,data/water/indicators/archive/water_status_surface_water.tif,water_status_surface_water.tif,264.67,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3724,7 +3724,7 @@ indicator,water,status,data/water/indicators/archive/water_status_surface_water.
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.774666284166059,2289220883,75.56,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.774666284166059,2289220883,75.56,FLT4S,TRUE,NA
 indicator,water,status,data/water/indicators/archive/water_status_surface_water_gf.tif,water_status_surface_water_gf.tif,264.77,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3765,7 +3765,7 @@ indicator,water,status,data/water/indicators/archive/water_status_surface_water_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.7746855350542359,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.7746855350542359,2288221416,75.53,FLT4S,TRUE,NA
 indicator,water,status,data/water/indicators/archive/water_status_surface_water_gf_test.tif,water_status_surface_water_gf_test.tif,264.77,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3806,7 +3806,7 @@ indicator,water,status,data/water/indicators/archive/water_status_surface_water_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.7746855350542359,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.7746855350542359,2288221416,75.53,FLT4S,TRUE,NA
 indicator,water,status,data/water/indicators/archive/water_status_surface_water_quantity.tif,water_status_surface_water_quantity.tif,222.7,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3847,7 +3847,7 @@ indicator,water,status,data/water/indicators/archive/water_status_surface_water_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.8509797105286913,2289220883,75.56,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.8509797105286913,2289220883,75.56,FLT4S,TRUE,NA
 indicator,water,status,data/water/indicators/archive/water_status_surface_water_timing.tif,water_status_surface_water_timing.tif,251.65,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3888,7 +3888,7 @@ indicator,water,status,data/water/indicators/archive/water_status_surface_water_
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.6983528686573287,2289220883,75.56,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.6983528686573287,2289220883,75.56,FLT4S,TRUE,NA
 indicator,water,NA,data/water/indicators/archive/water_treatment_scores_2024.tif,water_treatment_scores_2024.tif,225.25,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3929,7 +3929,7 @@ indicator,water,NA,data/water/indicators/archive/water_treatment_scores_2024.tif
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,0.5305019021034241,0.057926109520146,2464775304,81.36,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,0.5305019021034241,0.057926109520146,2464775304,81.36,FLT4S,TRUE,NA
 indicator,water,resistance,data/water/indicators/water_resistance_drought_plans.tif,water_resistance_drought_plans.tif,166.48,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -3970,7 +3970,7 @@ indicator,water,resistance,data/water/indicators/water_resistance_drought_plans.
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,0.8333333134651184,0.46775517411506745,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,0.8333333134651184,0.46775517411506745,2288221416,75.53,FLT4S,TRUE,NA
 indicator,water,resistance,data/water/indicators/water_resistance_water_treatment.tif,water_resistance_water_treatment.tif,226.62,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -4011,7 +4011,7 @@ indicator,water,resistance,data/water/indicators/water_resistance_water_treatmen
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,0.772977352142334,0.08211047939655451,2464775493,81.36,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,0.772977352142334,0.08211047939655451,2464775493,81.36,FLT4S,TRUE,NA
 indicator,water,status,data/water/indicators/water_status_surface_water_quantity.tif,water_status_surface_water_quantity.tif,222.78,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -4052,7 +4052,7 @@ indicator,water,status,data/water/indicators/water_status_surface_water_quantity
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.8510450721820162,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.8510450721820162,2288221416,75.53,FLT4S,TRUE,NA
 indicator,water,status,data/water/indicators/water_status_surface_water_timing.tif,water_status_surface_water_timing.tif,251.73,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -4093,7 +4093,7 @@ indicator,water,status,data/water/indicators/water_status_surface_water_timing.t
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.698326008821217,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.698326008821217,2288221416,75.53,FLT4S,TRUE,NA
 aggregate,water,domain_score,data/water/water_domain_score.tif,water_domain_score.tif,322.74,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -4134,7 +4134,7 @@ aggregate,water,domain_score,data/water/water_domain_score.tif,water_domain_scor
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,11.111111640930176,88.074432373046875,55.067678978579835,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,11.111111640930176,88.074432373046875,55.067678978579835,2288221416,75.53,FLT4S,TRUE,NA
 aggregate,water,resilience,data/water/water_resilience.tif,water_resilience.tif,246.85,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -4175,7 +4175,7 @@ aggregate,water,resilience,data/water/water_resilience.tif,water_resilience.tif,
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,0.761488676071167,0.3266680413609913,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,0.761488676071167,0.3266680413609913,2288221416,75.53,FLT4S,TRUE,NA
 aggregate,water,resistance,data/water/water_resistance.tif,water_resistance.tif,246.85,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -4216,7 +4216,7 @@ aggregate,water,resistance,data/water/water_resistance.tif,water_resistance.tif,
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,0.761488676071167,0.3266680413609913,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,0.761488676071167,0.3266680413609913,2288221416,75.53,FLT4S,TRUE,NA
 aggregate,water,status,data/water/water_status.tif,water_status.tif,264.83,52355,57865,3029522075,1,90,90,5070,"PROJCRS[""NAD83 / Conus Albers"",
     BASEGEOGCRS[""NAD83"",
         DATUM[""North American Datum 1983"",
@@ -4257,4 +4257,4 @@ aggregate,water,status,data/water/water_status.tif,water_status.tif,264.83,52355
         SCOPE[""Data analysis and small scale data presentation for contiguous lower 48 states.""],
         AREA[""United States (USA) - CONUS onshore - Alabama; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.""],
         BBOX[24.41,-124.79,49.38,-66.91]],
-    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919973,6199081.688491997,0,1,0.774685538476486,2288221416,75.53,FLT4S,TRUE,NA
+    ID[""EPSG"",5070]]",-5216639.669534829,-504689.66953482945,991231.6884919972,6199081.688491997,0,1,0.774685538476486,2288221416,75.53,FLT4S,TRUE,NA
