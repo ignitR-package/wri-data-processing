@@ -206,7 +206,8 @@ if (length(processed_files) > 0) {
   
   cat("Files remaining to process:", nrow(files_to_process))
   if (nrow(files_to_process) == 0) {
-    quit(save = "no")
+    cat("All files have already been processed. Nothing to do.\n")
+    return()  
   }
 }
 
