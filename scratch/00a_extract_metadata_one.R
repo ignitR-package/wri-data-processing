@@ -16,11 +16,6 @@
 #   - Computes simple value summaries (min, max, mean, NA percent)
 #   - Classifies the layer by data type, domain, and layer type
 #
-# What this script does NOT do:
-#   - Write any output files
-#   - Loop over multiple files
-#   - Perform consistency checks
-#
 # Why this script exists:
 #   Use this to test and debug metadata extraction logic on individual files
 #   before running the full batch process (scripts/00a_extract_metadata_one.R).
@@ -53,7 +48,6 @@ source("scripts/R/utils.R")
 
 # Config ---------------------------------------------------------------------
 
-# >>> CHANGE THIS to test different files <<<
 test_file <- "data/livelihoods/livelihoods_domain_score.tif"
 
 
