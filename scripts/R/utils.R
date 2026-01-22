@@ -1,7 +1,7 @@
 # =============================================================================
 # File: R/utils.R
 # Purpose: Shared helper functions for WRI data processing pipeline
-# Author: ignitR Team (Em, Ixel, Kaiju, Hylaea)
+# Author: ignitR Team (Emily, Ixel, Kaiju, Hylaea)
 # Created: January 2025
 #
 # Description:

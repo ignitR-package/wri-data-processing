@@ -35,15 +35,15 @@ wildfire-resilience-index/
 │   ├── README.md             # Workflow documentation
 │   ├── R/
 │   │   └── utils.R           # Shared helper functions
-│   ├── 00_extract_metadata.R # Extract metadata from all layers
-│   ├── 01_make_cog.R         # Convert all layers to COGs
-│   └── 02_make_stac.R        # Create STAC catalog
+│   ├── 00a_extract_metadata_one.R # Extract metadata from all layers
+│   ├── 01a_make_cog_one.R         # Convert all layers to COGs
+│   └── 02a_make_stac_one.R        # Create STAC catalog
 │
 ├── scratch/                  # Development & testing
 │   ├── README.md             # Prototype script notes
-│   ├── 00_extract_metadata.R # Single-layer metadata test
-│   ├── 01_make_cog.R         # Single-layer COG test
-│   └── 02_make_stac.R        # Single-layer STAC test
+│   ├── 00a_extract_metadata_one.R # Single-layer metadata test
+│   ├── 01a_make_cog_one.R         # Single-layer COG test
+│   └── 02a_make_stac_one.R        # Single-layer STAC test
 │
 ├── config/                   # Generated metadata (gitignored)
 │   ├── all_layers_metadata.csv
@@ -73,16 +73,16 @@ The pipeline runs in three sequential steps:
 
 ```r
 # Step 1: Extract metadata from all raw layers
-source("scripts/00_extract_metadata.R")
+source("scripts/00a_extract_metadata_one.R")
 
 # Step 2: Convert consistent layers to COGs
-source("scripts/01_make_cog.R")
+source("scripts/01a_make_cog_one.R")
 
 # Step 3: Create STAC catalog
-source("scripts/02_make_stac.R")
+source("scripts/02a_make_stac_one.R")
 ```
 
-Each script is safe to re-run — it will skip already-processed files.
+Each script is safe to re-run, skips already-processed files.
 
 ### Testing on Single Files
 
@@ -90,13 +90,13 @@ Use the scripts in `scratch/` to test the pipeline on individual files:
 
 ```r
 # Test metadata extraction
-source("scratch/00_extract_metadata.R")
+source("scratch/00a_extract_metadata_one.R")
 
 # Test COG conversion
-source("scratch/01_make_cog.R")
+source("scratch/01a_make_cog_one.R")
 
 # Test STAC creation
-source("scratch/02_make_stac.R")
+source("scratch/02a_make_stac_one.R")
 ```
 
 See the [scratch README](scratch/README.md) for details.
@@ -108,7 +108,7 @@ Raw GeoTIFFs (data/)
         │
         ▼
 ┌───────────────────────────┐
-│ 00_extract_metadata.R     │
+│ 00a_extract_metadata_one.R     │
 │ - Scan all .tif files     │
 │ - Extract raster metadata │
 │ - Classify by type/domain │
@@ -120,7 +120,7 @@ Raw GeoTIFFs (data/)
         │
         ▼
 ┌───────────────────────────┐
-│ 01_make_cog.R             │
+│ 01a_make_cog_one.R             │
 │ - Read metadata inventory │
 │ - Convert each to COG     │
 │ - Choose resampling method│
@@ -132,7 +132,7 @@ Raw GeoTIFFs (data/)
         │
         ▼
 ┌───────────────────────────┐
-│ 02_make_stac.R            │
+│ 02a_make_stac_one.R            │
 │ - Read conversion log     │
 │ - Extract spatial extents │
 │ - Create STAC items       │
