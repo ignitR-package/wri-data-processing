@@ -53,5 +53,5 @@ rsconnect/
 data/*
 
 # Cog files
-cogs/*
+**/cogs/
 
