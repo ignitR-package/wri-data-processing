@@ -27,7 +27,7 @@ terraOptions(overwrite = TRUE)
 
 # --- Config -------------------------------------------------------------------
 
-meta_csv <- "config/all_layers_consistent.csv"
+meta_csv <- "metadata/all_layers_consistent.csv"
 out_dir  <- "cogs"
 
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
