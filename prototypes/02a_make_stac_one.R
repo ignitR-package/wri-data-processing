@@ -31,10 +31,10 @@ row <- meta[meta$filename == target_filename, ]
 if (nrow(row) == 0) stop("No metadata for: ", target_filename)
 row <- row[1, ]
 
-cog_path <- path(cogs_dir, row$filename)
+cog_path <- path(cogs_dir, row$cog_filename)
 if (!file_exists(cog_path)) stop("COG not found: ", cog_path)
 
-item_id <- tools::file_path_sans_ext(row$filename)
+item_id <- tools::file_path_sans_ext(row$cog_filename)
 
 # --- Compute spatial (4326) ---------------------------------------------------
 

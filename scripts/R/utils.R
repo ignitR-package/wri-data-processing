@@ -42,8 +42,7 @@ near <- function(a, b, tol = 1e-6) {
 
 #' Generate unique COG filename from filepath
 #'
-#' Handles naming collisions for files in indicators_no_mask/ and final_checks/
-#' by adding suffixes.
+#' Handles naming collisions for files in indicators_no_mask/ by adding suffixes.
 #'
 #' @param filepath Character. Original file path.
 #' @return Unique filename for COG output
@@ -80,7 +79,7 @@ classify_data_type <- function(filepath) {
     return("exclude")
   }
   
-  # Indicators live in /indicators/ (includes no_mask) or /final_checks/
+  # Indicators live in /indicators/ (includes no_mask)
   if (grepl("/indicators/", filepath)) return("indicator")
   
   # The final combined WRI score

@@ -59,7 +59,7 @@ required_cols <- c(
   "filepath", "filename", 
   "extent_xmin", "extent_xmax", "extent_ymin", "extent_ymax", 
   "crs_epsg",
-  "data_type", "wri_domain", "wri_layer_type"
+  "data_type", "wri_domain", "wri_layer_type", "required_cols"
 )
 
 missing <- setdiff(required_cols, names(meta))
@@ -70,8 +70,8 @@ if (length(missing) > 0) {
 if (nrow(meta) == 0) stop("Metadata CSV is empty")
 
 # Check for duplicate filenames
-if (any(duplicated(meta$filename))) {
-  dup <- meta$filename[duplicated(meta$filename)][1]
+if (any(duplicated(meta$cog_filename))) {
+  dup <- meta$cog_filename[duplicated(meta$cog_filename)][1]
   stop("Duplicate filename in metadata (cannot use as unique COG ID): ", dup)
 }
 
@@ -93,16 +93,16 @@ cat("Output directory:", stac_root, "\n\n")
 
 for (i in seq_len(n_total)) {
   row <- meta[i, ]
-  cog_path <- path(cogs_dir, row$filename)
+  cog_path <- path(cogs_dir, row$cog_filename)
   
   # Skip if COG doesn't exist (may not have been converted yet)
   if (!file_exists(cog_path)) {
-    cat(sprintf("[%d/%d] Missing COG, skipping: %s\n", i, n_total, row$filename))
+    cat(sprintf("[%d/%d] Missing COG, skipping: %s\n", i, n_total, row$cog_filename))
     counts["missing_cog"] <- counts["missing_cog"] + 1
     next
   }
   
-  item_id <- tools::file_path_sans_ext(row$filename)
+  item_id <- tools::file_path_sans_ext(row$cog_filename)
   item_path <- path(items_dir, paste0(item_id, ".json"))
   
   # Skip if item already exists (allows resume)

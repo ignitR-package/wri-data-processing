@@ -7,7 +7,7 @@
 #   data with internal tiling and overviews.
 #
 # Input:
-#   config/all_layers_consistent.csv (produced by 00b)
+#   metadata/all_layers_consistent.csv (produced by 00b)
 #
 # Output:
 #   cogs/<filename>.tif
@@ -55,7 +55,7 @@ cat("Output directory:", out_dir, "\n\n")
 
 for (i in seq_len(n_total)) {
   in_tif  <- meta$filepath[i]
-  out_cog <- file.path(out_dir, basename(in_tif))
+  out_cog <- file.path(out_dir, meta$cog_filename[i])
   
   cat(sprintf("[%d/%d] %s\n", i, n_total, basename(in_tif)))
   
