@@ -16,11 +16,10 @@
   "bbox": [-146.2082, 19.1074, 173.7109, 54.8056],
   "properties": {
     "datetime": "2026-06-05T00:00:00Z",
-    "asset_hosting": "local_relative_paths",
-    "cog:blocksize": 512,
-    "cog:compression": "DEFLATE",
-    "cog:overview_resampling": "AVERAGE",
-    "proj:epsg": "5070"
+    "proj:epsg": 5070,
+    "data_type": "aggregate",
+    "wri_domain": "livelihoods",
+    "wri_layer_type": "domain_score"
   },
   "assets": {
     "data": {

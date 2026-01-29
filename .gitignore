@@ -8,7 +8,7 @@
 
 # User-specific files
 .Ruserdata
-kaiju_explore/
+/prototypes/kaiju_explore/
 
 # Example code in package build process
 *-Ex.R

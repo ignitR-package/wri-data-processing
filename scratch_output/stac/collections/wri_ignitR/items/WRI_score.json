@@ -16,16 +16,10 @@
   "bbox": [-146.2082, 19.1074, 173.7109, 54.8056],
   "properties": {
     "datetime": "2026-06-05T00:00:00Z",
-    "proj:epsg": 5070,
-    "proj:shape": [57865, 52355],
-    "resolution_m": [90, 90],
-    "source_filepath": "data/WRI_score.tif",
-    "value_min": 50.4636,
-    "value_max": 87.4085,
-    "value_mean": 73.2054,
-    "na_percent": 75.466,
-    "processing_assumptions": "CRS/extent/resolution validated upstream in 00a/00b",
-    "cog_specs": "terra::writeRaster(filetype = 'COG') defaults"
+    "proj:epsg": [],
+    "data_type": "final_score",
+    "wri_domain": "unknown",
+    "wri_layer_type": null
   },
   "assets": {
     "data": {

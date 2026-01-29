@@ -16,17 +16,14 @@
   "bbox": [-146.2082, 19.1074, 173.7109, 54.8056],
   "properties": {
     "datetime": "2026-06-05T00:00:00Z",
+    "proj:epsg": 5070,
     "data_type": "indicator",
-    "domain": "air_quality",
-    "layer_type": "status",
-    "cog:blocksize": 512,
-    "cog:compression": "DEFLATE",
-    "cog:overview_resampling": "NEAREST",
-    "proj:epsg": "5070"
+    "wri_domain": "air_quality",
+    "wri_layer_type": "status"
   },
   "assets": {
     "data": {
-      "href": "../cogs/indicator/air_quality/air_quality_status_aqi_100.tif",
+      "href": "../cogs/air_quality_status_aqi_100.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "roles": [
         "data"

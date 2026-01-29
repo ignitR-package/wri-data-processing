@@ -2,7 +2,7 @@
   "stac_version": "1.0.0",
   "type": "Catalog",
   "id": "wri-catalog",
-  "description": "WRI raster layers as Cloud Optimized GeoTIFFs (COGs)",
+  "description": "WRI raster layers as COGs",
   "links": [
     {
       "rel": "self",

@@ -16,17 +16,14 @@
   "bbox": [-146.2082, 19.1074, 173.7109, 54.8056],
   "properties": {
     "datetime": "2026-06-05T00:00:00Z",
+    "proj:epsg": 5070,
     "data_type": "indicator",
-    "domain": "species",
-    "layer_type": "resistance",
-    "cog:blocksize": 512,
-    "cog:compression": "DEFLATE",
-    "cog:overview_resampling": "AVERAGE",
-    "proj:epsg": "5070"
+    "wri_domain": "species",
+    "wri_layer_type": "resistance"
   },
   "assets": {
     "data": {
-      "href": "../cogs/indicator/species/species_resistance_traits.tif",
+      "href": "../cogs/species_resistance_traits.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "roles": [
         "data"

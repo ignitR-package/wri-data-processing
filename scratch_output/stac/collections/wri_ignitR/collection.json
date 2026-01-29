@@ -2,7 +2,7 @@
   "stac_version": "1.0.0",
   "type": "Collection",
   "id": "wri_ignitR",
-  "description": "WRI raster layers (COGs) in one collection",
+  "description": "WRI raster layers (COGs)",
   "license": "proprietary",
   "extent": {
     "spatial": {

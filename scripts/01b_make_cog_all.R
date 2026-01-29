@@ -1,109 +1,103 @@
 # =============================================================================
-# Script: scripts/01b_convert_cogs_all_consistent.R
+# 01b_make_cog_all.R - Convert ALL consistent GeoTIFFs to COGs
 #
 # Purpose:
-#   Convert ALL "consistent" GeoTIFFs (from the metadata CSV) into COGs.
+#   Convert all files that passed metadata validation into Cloud Optimized
+#   GeoTIFFs (COGs). COGs enable efficient cloud-based access by organizing
+#   data with internal tiling and overviews.
 #
-# Inputs:
-#   - config/all_layers_consistent.csv   (produced by 00b)
+# Input:
+#   config/all_layers_consistent.csv (produced by 00b)
 #
-# Outputs:
-#   - cogs/<same filename>.tif
+# Output:
+#   cogs/<filename>.tif
 #
 # Notes:
-#   - Uses the metadata CSV to choose which files to convert.
-#   - Does NOT re-extract metadata.
+#   - Uses the metadata CSV to determine which files to convert.
+#   - Does NOT re-extract or validate metadata.
 #   - Rerun-safe: skips files whose COG already exists.
-#   - Does NOT call quit() (safe in interactive sessions).
+#   - Errors are caught and logged so the loop continues.
 # =============================================================================
 
 library(terra)
 library(readr)
 
-# Make terra non-interactive about overwriting (prevents prompts)
+# Prevent terra from prompting about overwrites
 terraOptions(overwrite = TRUE)
 
-# --- Config ---------------------------------------------------------------
+# --- Config -------------------------------------------------------------------
 
 meta_csv <- "config/all_layers_consistent.csv"
 out_dir  <- "cogs"
 
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
-# --- Run ------------------------------------------------------------------
+# --- Run ----------------------------------------------------------------------
 
 if (!file.exists(meta_csv)) stop("Missing metadata CSV: ", meta_csv)
 
 meta <- readr::read_csv(meta_csv, show_col_types = FALSE)
 
-if (!("filepath" %in% names(meta))) {
-  stop("Metadata file is missing a 'filepath' column: ", meta_csv)
+if (!"filepath" %in% names(meta)) {
+  stop("Metadata CSV missing 'filepath' column")
 }
 
 if (nrow(meta) == 0) {
-  cat("No rows in metadata file. Nothing to convert.\n")
-} else {
+  cat("No files to convert.\n")
+  quit(save = "no")
+}
+
+n_total <- nrow(meta)
+counts <- c(written = 0, skipped = 0, missing = 0, failed = 0)
+
+cat("Converting", n_total, "files to COG format\n")
+cat("Output directory:", out_dir, "\n\n")
+
+for (i in seq_len(n_total)) {
+  in_tif  <- meta$filepath[i]
+  out_cog <- file.path(out_dir, basename(in_tif))
   
-  n_total   <- nrow(meta)
-  n_written <- 0
-  n_skipped <- 0
-  n_missing <- 0
-  n_failed  <- 0
+  cat(sprintf("[%d/%d] %s\n", i, n_total, basename(in_tif)))
   
-  for (i in seq_len(n_total)) {
-    in_tif  <- meta$filepath[i]
-    out_cog <- file.path(out_dir, basename(in_tif))
-    
-    cat(sprintf("[%d/%d] %s\n", i, n_total, basename(in_tif)))
-    
-    # Skip if input missing
-    if (!file.exists(in_tif)) {
-      cat("  Missing input, skipping:", in_tif, "\n")
-      n_missing <- n_missing + 1
-      next
-    }
-    
-    # Skip if already converted
-    if (file.exists(out_cog)) {
-      cat("  COG exists, skipping:", out_cog, "\n")
-      n_skipped <- n_skipped + 1
-      next
-    }
-    
-    # Convert (catch errors so the loop continues)
-    ok <- TRUE
-    err_msg <- NA_character_
-    
-    tryCatch({
-      r <- terra::rast(in_tif)
-      
-      # overwrite=TRUE here prevents GDAL/terra prompts.
-      # It is safe because we already checked file.exists(out_cog) above.
-      terra::writeRaster(
-        r,
-        out_cog,
-        filetype  = "COG",
-        overwrite = TRUE,
-        gdal=c("NUM_THREADS=50")
-      )
-    }, error = function(e) {
-      ok <<- FALSE
-      err_msg <<- as.character(e)
-    })
-    
-    if (ok) {
-      cat("  Wrote:", out_cog, "\n")
-      n_written <- n_written + 1
-    } else {
-      cat("  FAILED:", err_msg, "\n")
-      n_failed <- n_failed + 1
-    }
+  # Skip if input file is missing (shouldn't happen, but check anyway)
+  if (!file.exists(in_tif)) {
+    cat("  WARNING: Input file missing, skipping\n")
+    counts["missing"] <- counts["missing"] + 1
+    next
   }
   
-  cat("\nDone.\n")
-  cat("  Total in metadata:", n_total, "\n")
-  cat("  Written:", n_written, "\n")
-  cat("  Skipped (exists):", n_skipped, "\n")
-  cat("  Missing inputs:", n_missing, "\n")
-  cat("  Failed conversions:", n_failed, "\n")
+  # Skip if COG already exists (allows resume after interruption)
+  if (file.exists(out_cog)) {
+    cat("  Already exists, skipping\n")
+    counts["skipped"] <- counts["skipped"] + 1
+    next
+  }
+  
+  # Attempt conversion with error handling
+  ok <- tryCatch({
+    r <- terra::rast(in_tif)
+    terra::writeRaster(r, out_cog, filetype = "COG", overwrite = TRUE)
+    TRUE
+  }, error = function(e) {
+    cat("  ERROR:", conditionMessage(e), "\n")
+    FALSE
+  })
+  
+  if (ok) {
+    out_size <- round(file.info(out_cog)$size / 1024^2, 2)
+    cat("  Wrote:", out_cog, "(", out_size, "MB)\n")
+    counts["written"] <- counts["written"] + 1
+  } else {
+    counts["failed"] <- counts["failed"] + 1
+  }
 }
+
+# --- Summary ------------------------------------------------------------------
+
+cat("\n")
+cat("=== Conversion Summary ===\n")
+cat("  Total in metadata:", n_total, "\n")
+cat("  Written:          ", counts["written"], "\n")
+cat("  Skipped (exists): ", counts["skipped"], "\n")
+cat("  Missing inputs:   ", counts["missing"], "\n")
+cat("  Failed:           ", counts["failed"], "\n")

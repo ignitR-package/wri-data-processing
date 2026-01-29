@@ -1,25 +1,22 @@
 # =============================================================================
-# Script: scripts/00b_extract_metadata_all.R
+# 00b_extract_metadata_all.R - Extract metadata for ALL WRI GeoTIFFs
 #
 # Purpose:
-#   Extract metadata for ALL WRI GeoTIFFs under data/ and verify the fixed
-#   project assumptions:
-#     - EPSG:5070
-#     - resolution 90 x 90 (meters)
-#     - extent:
-#         xmin = -5216639.67
-#         xmax =  -504689.6695
-#         ymin =   991231.6885
-#         ymax =  6199081.688
+#   Extract header metadata for all WRI GeoTIFFs under data/ and verify the
+#   fixed project assumptions (EPSG:5070, 90x90m resolution, consistent extent).
+#   Classifies each file by data_type, domain, and layer_type for downstream
+#   STAC item properties.
 #
-# Outputs (3 files):
-#   - config/all_layers_raw.csv           (all results, including failures)
-#   - config/all_layers_consistent.csv    (successful + passes assumptions)
-#   - config/all_layers_inconsistent.csv  (successful + fails assumptions)
+# Outputs:
+#   metadata/all_layers_consistent.csv   - valid files passing assumptions (always)
+#   metadata/all_layers_raw.csv          - all results (only if issues exist)
+#   metadata/all_layers_inconsistent.csv - files failing assumptions (only if issues exist)
 #
 # Notes:
-#   - No raster modification.
-#   - Simple "resume": if all_layers_raw.csv exists, we skip files already in it.
+#   - No raster modification occurs here.
+#   - Simple resume support: if raw CSV exists, previously processed files are skipped.
+#   - CRS/extent/resolution are assumed consistent across dataset but validated
+#     per-file as a QC check.
 # =============================================================================
 
 library(terra)
@@ -29,64 +26,58 @@ library(fs)
 
 source("scripts/R/utils.R")
 
-# --- Config ---------------------------------------------------------------
+# --- Config -------------------------------------------------------------------
 
 raw_data_path <- "data"
+dir_create("metadata")
 
-dir_create("config")
+out_raw          <- "metadata/all_layers_raw.csv"
+out_consistent   <- "metadata/all_layers_consistent.csv"
+out_inconsistent <- "metadata/all_layers_inconsistent.csv"
 
-out_raw         <- "config/all_layers_raw.csv"
-out_consistent  <- "config/all_layers_consistent.csv"
-out_inconsistent<- "config/all_layers_inconsistent.csv"
+# Expected values (project assumptions)
+# These are documented in the README and verified here as a sanity check.
+expected <- list(
+  epsg  = 5070,
+  res_x = 90,
+  res_y = 90,
+  xmin  = -5216639.67,
+  xmax  = -504689.6695,
+  ymin  = 991231.6885,
+  ymax  = 6199081.688
+)
 
-# Expected constants (assumptions)
-expected_epsg <- 5070
-expected_res_x <- 90
-expected_res_y <- 90
-
-expected_xmin <- -5216639.67
-expected_xmax <-  -504689.6695
-expected_ymin <-   991231.6885
-expected_ymax <-  6199081.688
-
-# Sampling
-sample_size <- 200000
-set.seed(1)
-
-# Numeric tolerance for comparisons (avoid floating point false mismatches)
+# Numeric tolerance for floating point comparisons
 tol <- 1e-6
 
-# --- Resume support -------------------------------------------------------
+# --- Resume support -----------------------------------------------------------
+# If we've already processed some files, skip them on re-run.
+# This allows recovery from interruptions without starting over.
 
 processed_files <- character(0)
 
 if (file_exists(out_raw)) {
   old <- read_csv(out_raw, show_col_types = FALSE)
   if ("filepath" %in% names(old)) processed_files <- old$filepath
-  cat("Found existing raw metadata. Previously processed:", length(processed_files), "\n")
+  cat("Previously processed:", length(processed_files), "\n")
 }
 
-# --- List all tif files ---------------------------------------------------
+# --- List files ---------------------------------------------------------------
+# Find all .tif files and filter out "exclude" types (archive, final_checks, etc.)
 
 all_tifs <- dir_ls(raw_data_path, recurse = TRUE, glob = "*.tif")
 
-# Keep only files we want to track (based on your WRI rules)
+# classify_data_type returns "exclude" for files we don't want to process
 files <- all_tifs[vapply(all_tifs, classify_data_type, character(1)) != "exclude"]
 
-# Skip previously processed
-if (length(processed_files) > 0) {
-  files <- files[!files %in% processed_files]
-}
+# Remove already-processed files (resume support)
+files <- files[!files %in% processed_files]
 
 cat("Files to process:", length(files), "\n")
 
-# --- Helper: compare numbers with tolerance -------------------------------
-
-near_num <- function(a, b, tol) {
-  isTRUE(all.equal(as.numeric(a), as.numeric(b), tolerance = tol))
-}
-
-# --- Process all files ----------------------------------------------------
+# --- Process ------------------------------------------------------------------
+# Extract metadata for each file and validate against project assumptions.
+# Results are buffered and written in batches to avoid memory issues.
 
 buffer <- list()
 batch_n <- 10
@@ -95,63 +86,63 @@ for (i in seq_along(files)) {
   fp <- files[i]
   cat(sprintf("[%d/%d] %s\n", i, length(files), basename(fp)))
   
-  # Extract metadata + sample stats (from utils.R)
-  info <- get_raster_info(fp, sample_size = sample_size)
+  # Extract header metadata (no value sampling, just dimensions/CRS/extent)
+  info <- get_raster_header(fp)
   
-  # Default flags
+  # --- Classification fields ---
+  # These are used downstream in STAC item properties to enable filtering
+  # by data type (indicator/aggregate/final_score), domain (livelihoods, etc.),
+  # and layer type (resistance/recovery/status/domain_score).
+  info$data_type <- classify_data_type(fp)
+  info$wri_domain <- extract_domain(fp)
+  info$wri_layer_type <- classify_layer_type(info$data_type, basename(fp))
+  info$cog_filename <- make_cog_filename(fp)
+  
+  # Initialize assumption check fields
   info$passes_assumptions <- NA
-  info$assumption_error   <- NA_character_
+  info$assumption_error <- NA_character_
   
-  # If raster load failed, keep it as a failure row
-  if (!isTRUE(info$success)) {
-    buffer[[length(buffer) + 1]] <- info
-  } else {
-    # --- Verify assumptions (only if success == TRUE) ---
+  # --- Validate assumptions (only for successfully read files) ---
+  if (isTRUE(info$success)) {
+    err <- NULL
     
-    # Check EPSG (integer)
-    epsg <- info$crs
-    if (is.na(epsg)) {
-      info$passes_assumptions <- FALSE
-      info$assumption_error <- "EPSG is NA (expected 5070)"
-    } else if (as.integer(epsg) != expected_epsg) {
-      info$passes_assumptions <- FALSE
-      info$assumption_error <- paste0("EPSG mismatch (found ", epsg, ", expected 5070)")
+    # Check CRS
+    if (is.na(info$crs_epsg)) {
+      err <- "EPSG is NA"
+    } else if (info$crs_epsg != expected$epsg) {
+      err <- paste0("EPSG mismatch (", info$crs_epsg, ")")
     }
     
-    # Check resolution (numeric with tolerance)
-    if (is.na(info$passes_assumptions)) {
-      rx <- info$resolution_x
-      ry <- info$resolution_y
-      if (!near_num(rx, expected_res_x, tol) || !near_num(ry, expected_res_y, tol)) {
-        info$passes_assumptions <- FALSE
-        info$assumption_error <- paste0(
-          "Resolution mismatch (found ", rx, "x", ry, ", expected 90x90)"
-        )
+    # Check resolution
+    if (is.null(err)) {
+      if (!near(info$resolution_x, expected$res_x, tol) || 
+          !near(info$resolution_y, expected$res_y, tol)) {
+        err <- paste0("Resolution mismatch (", info$resolution_x, "x", info$resolution_y, ")")
       }
     }
     
-    # Check extent (numeric with tolerance)
-    if (is.na(info$passes_assumptions)) {
-      if (!near_num(info$extent_xmin, expected_xmin, tol) ||
-          !near_num(info$extent_xmax, expected_xmax, tol) ||
-          !near_num(info$extent_ymin, expected_ymin, tol) ||
-          !near_num(info$extent_ymax, expected_ymax, tol)) {
-        
-        info$passes_assumptions <- FALSE
-        info$assumption_error <- "Extent mismatch (does not match expected xmin/xmax/ymin/ymax)"
+    # Check extent
+    if (is.null(err)) {
+      if (!near(info$extent_xmin, expected$xmin, tol) ||
+          !near(info$extent_xmax, expected$xmax, tol) ||
+          !near(info$extent_ymin, expected$ymin, tol) ||
+          !near(info$extent_ymax, expected$ymax, tol)) {
+        err <- "Extent mismatch"
       }
     }
     
-    # If nothing failed, it passes
-    if (is.na(info$passes_assumptions)) {
+    # Record result
+    if (is.null(err)) {
       info$passes_assumptions <- TRUE
-      info$assumption_error <- NA_character_
+    } else {
+      info$passes_assumptions <- FALSE
+      info$assumption_error <- err
     }
-    
-    buffer[[length(buffer) + 1]] <- info
   }
   
-  # Append in small batches
+  buffer[[length(buffer) + 1]] <- info
+  
+  # Write in batches to avoid holding everything in memory
   if (length(buffer) >= batch_n) {
     append_rows_csv(buffer, out_raw)
     buffer <- list()
@@ -159,38 +150,38 @@ for (i in seq_along(files)) {
 }
 
 # Write any remaining rows
-if (length(buffer) > 0) {
-  append_rows_csv(buffer, out_raw)
-}
+if (length(buffer) > 0) append_rows_csv(buffer, out_raw)
 
-cat("Saved/updated:", out_raw, "\n")
+cat("Saved:", out_raw, "\n")
 
-# --- Split into consistent/inconsistent and write the other 2 files --------
+# --- Split and save -----------------------------------------------------------
+# Always produce the consistent CSV. Only keep raw/inconsistent if there are
+# problems (failed reads or files that don't pass assumptions).
 
 all_meta <- read_csv(out_raw, show_col_types = FALSE)
 
-# Ensure assumption columns exist (for resume safety)
-if (!"passes_assumptions" %in% names(all_meta)) {
-  all_meta$passes_assumptions <- NA
-}
-if (!"assumption_error" %in% names(all_meta)) {
-  all_meta$assumption_error <- NA_character_
-}
-
-
-successful <- all_meta %>% filter(success)
-consistent <- successful %>% filter(passes_assumptions)
-inconsistent <- successful %>% filter(!passes_assumptions)
+successful   <- all_meta %>% filter(success == TRUE)
+consistent   <- successful %>% filter(passes_assumptions == TRUE)
+inconsistent <- successful %>% filter(passes_assumptions == FALSE)
 
 write_csv(consistent, out_consistent)
-write_csv(inconsistent, out_inconsistent)
+
+# Keep diagnostic files only if there are issues to investigate
+if (nrow(inconsistent) > 0 || nrow(all_meta) > nrow(successful)) {
+  write_csv(inconsistent, out_inconsistent)
+  cat("Saved:", out_raw, "\n")
+  cat("Saved:", out_inconsistent, "\n")
+} else {
+  # Everything passed - clean up intermediate file
+  file_delete(out_raw)
+}
 
 cat("Saved:", out_consistent, "\n")
-cat("Saved:", out_inconsistent, "\n")
 
-cat("Summary\n")
-cat("  Total rows:", nrow(all_meta), "\n")
-cat("  Successful:", nrow(successful), "\n")
-cat("  Consistent:", nrow(consistent), "\n")
-cat("  Inconsistent:", nrow(inconsistent), "\n")
-cat("  Failed reads:", nrow(all_meta) - nrow(successful), "\n")
+# --- Summary ------------------------------------------------------------------
+
+cat("\nSummary\n")
+cat("  Total:        ", nrow(all_meta), "\n")
+cat("  Consistent:   ", nrow(consistent), "\n")
+cat("  Inconsistent: ", nrow(inconsistent), "\n")
+cat("  Failed reads: ", nrow(all_meta) - nrow(successful), "\n")

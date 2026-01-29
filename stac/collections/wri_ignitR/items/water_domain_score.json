@@ -16,17 +16,14 @@
   "bbox": [-146.2082, 19.1074, 173.7109, 54.8056],
   "properties": {
     "datetime": "2026-06-05T00:00:00Z",
+    "proj:epsg": 5070,
     "data_type": "aggregate",
-    "domain": "water",
-    "layer_type": "domain_score",
-    "cog:blocksize": 512,
-    "cog:compression": "DEFLATE",
-    "cog:overview_resampling": "AVERAGE",
-    "proj:epsg": "5070"
+    "wri_domain": "water",
+    "wri_layer_type": "domain_score"
   },
   "assets": {
     "data": {
-      "href": "../cogs/aggregate/water/water_domain_score.tif",
+      "href": "../cogs/water_domain_score.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "roles": [
         "data"

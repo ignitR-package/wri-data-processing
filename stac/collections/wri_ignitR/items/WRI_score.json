@@ -16,17 +16,14 @@
   "bbox": [-146.2082, 19.1074, 173.7109, 54.8056],
   "properties": {
     "datetime": "2026-06-05T00:00:00Z",
+    "proj:epsg": 5070,
     "data_type": "final_score",
-    "domain": "all_domains",
-    "layer_type": null,
-    "cog:blocksize": 512,
-    "cog:compression": "DEFLATE",
-    "cog:overview_resampling": "AVERAGE",
-    "proj:epsg": "5070"
+    "wri_domain": "unknown",
+    "wri_layer_type": null
   },
   "assets": {
     "data": {
-      "href": "../cogs/final_score/all_domains/WRI_score.tif",
+      "href": "../cogs/WRI_score.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "roles": [
         "data"
