@@ -1,3 +1,5 @@
+# [UPDATE THIS README]
+
 # WRI Data Processing Scripts
 
 This folder contains the production pipeline for processing the Wildfire Resilience Index dataset.

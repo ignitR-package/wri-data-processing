@@ -1,2 +1,2 @@
-"filepath","filename","file_size_mb","nrows","ncols","nlayers","resolution_x","resolution_y","crs_epsg","extent_xmin","extent_xmax","extent_ymin","extent_ymax","datatype","data_type","wri_domain","wri_layer_type"
-"data/livelihoods/livelihoods_domain_score.tif","livelihoods_domain_score.tif",184,57865,52355,1,90,90,5070,-5216639.66953483,-504689.669534829,991231.688491997,6199081.688492,"FLT4S","aggregate","livelihoods","domain_score"
+"filepath","filename","file_size_mb","nrows","ncols","nlayers","resolution_x","resolution_y","crs_epsg","extent_xmin","extent_xmax","extent_ymin","extent_ymax","datatype","data_type","wri_domain","wri_layer_type","cog_filename"
+"data/livelihoods/livelihoods_domain_score.tif","livelihoods_domain_score.tif",184,57865,52355,1,90,90,5070,-5216639.66953483,-504689.669534829,991231.688491997,6199081.688492,"FLT4S","aggregate","livelihoods","domain_score","livelihoods_domain_score.tif"
