@@ -21,6 +21,7 @@
 
 library(terra)
 library(readr)
+library(gdalUtilities)
 
 # Prevent terra from prompting about overwrites
 terraOptions(overwrite = TRUE)
@@ -31,6 +32,20 @@ meta_csv <- "metadata/all_layers_consistent.csv"
 out_dir  <- "cogs"
 
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+
+# --- Config for gdal_translate --------------------------------------------
+
+gdal_translate <- Sys.which("gdal_translate")
+if (gdal_translate == "") stop("gdal_translate not found on PATH")
+
+cog_co <- c(
+  #"COMPRESS=DEFLATE",
+  #"BLOCKSIZE=512",
+  #"NUM_THREADS=50",
+  #"RESAMPLING=AVERAGE"
+)
+
+co_args <- as.vector(rbind("-co", cog_co))
 
 # --- Run ----------------------------------------------------------------------
 
@@ -75,9 +90,14 @@ for (i in seq_len(n_total)) {
   
   # Attempt conversion with error handling
   ok <- tryCatch({
-    r <- terra::rast(in_tif)
-    terra::writeRaster(r, out_cog, filetype = "COG", overwrite = TRUE)
-    TRUE
+    gdal_translate(
+      src_dataset = in_tif,
+      dst_dataset = out_cog,
+      of = "COG",
+      co = cog_co,
+      overwrite = TRUE
+    )
+    file.exists(out_cog)
   }, error = function(e) {
     cat("  ERROR:", conditionMessage(e), "\n")
     FALSE
