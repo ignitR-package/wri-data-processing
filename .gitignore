@@ -52,6 +52,9 @@ rsconnect/
 # Data folder
 data/*
 
+# Validation reports
+outputs/validation_reports/*
+
 # Cog files
 **/cogs/
 
