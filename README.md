@@ -1,85 +1,183 @@
-# WRI Data Processing Pipeline
+# Wildfire Resilience Index (WRI) Data Processing
 
-This repository contains a staged, reproducible pipeline for preparing Wildfire Resilience Index (WRI) raster data for downstream use. The pipeline extracts and validates metadata, converts rasters to Cloud Optimized GeoTIFFs (COGs), and generates STAC metadata for discovery and access.
+This repository contains the data processing pipeline for converting the Wildfire Resilience Index (WRI) dataset into a cloud-accessible format. The pipeline transforms raw GeoTIFF layers into Cloud-Optimized GeoTIFFs (COGs) with STAC metadata for discovery and access.
 
-The workflow is intentionally split into small, explicit steps. Expensive operations (reading large rasters) happen once, and all later steps rely on saved metadata.
+## Project Overview
 
----
+The WRI measures wildfire resilience across California using eight domains: Infrastructure, Communities, Livelihoods, Sense of Place, Species, Habitats, Water, and Air. The dataset includes nearly 100 high-resolution geospatial layers totaling approximately 250 GB.
 
-## High-level workflow
+This processing pipeline prepares the data for public access through an R package by:
 
-Raw GeoTIFFs  
-→ Metadata extraction + validation (00a / 00b)  
-→ Metadata CSVs (source of truth)  
-→ COG creation (01a / 01b)  
-→ COGs  
-→ STAC generation (02a / 02b)
+1. **Extracting metadata** from all raw GeoTIFF layers
+2. **Converting to COGs** with appropriate compression and tiling
+3. **Creating STAC catalogs** for standardized data discovery
 
----
+### Team
 
-## Design principles
+**ignitR** — MEDS Capstone Project, UC Santa Barbara Bren School
 
-- Single source of truth via metadata CSVs  
-- Explicit spatial assumptions enforced once  
-- Prototype (`a`) scripts mirrored by scaled (`b`) scripts  
-- Rerun-safe, non-interactive execution  
+- Emily Miller
+- Ixel Medrano
+- Kaiju Morquecho
+- Hylaea Miller
 
----
+**Faculty Advisor:** Max Czapanskiy  
+**Client:** Dr. Caitlin Fong, NCEAS
 
-## Directory structure
+## Repository Structure
 
-data/  
-config/  
-cogs/  
-scripts/  
-scratch/  
-scratch_output/
+```
+wildfire-resilience-index/
+│
+├── README.md                 # This file
+│
+├── scripts/                  # Production pipeline
+│   ├── README.md             # Workflow documentation
+│   ├── R/
+│   │   └── utils.R           # Shared helper functions
+│   ├── 00a_extract_metadata_one.R # Extract metadata from all layers
+│   ├── 01a_make_cog_one.R         # Convert all layers to COGs
+│   └── 02a_make_stac_one.R        # Create STAC catalog
+│
+├── scratch/                  # Development & testing
+│   ├── README.md             # Prototype script notes
+│   ├── 00a_extract_metadata_one.R # Single-layer metadata test
+│   ├── 01a_make_cog_one.R         # Single-layer COG test
+│   └── 02a_make_stac_one.R        # Single-layer STAC test
+│
+├── config/                   # Generated metadata (gitignored)
+│   ├── all_layers_metadata.csv
+│   ├── indicator_layers.csv
+│   ├── aggregate_layers.csv
+│   └── ...
+│
+├── cogs/                     # Generated COGs (gitignored)
+│
+├── stac/                     # Generated STAC catalog (gitignored)
+│
+├── outputs/                  # Validation reports (gitignored)
+│
+└── data/                     # Raw WRI data (not in repo)
+```
 
----
+## Quick Start
 
-## Step 00: Metadata extraction and validation
+### Prerequisites
 
-Extract raster metadata once and validate core spatial assumptions.
+- **R 4.x** with packages: `terra`, `sf`, `dplyr`, `readr`, `fs`, `jsonlite`, `glue`
+- **GDAL 3.x** with COG driver support (for `gdal_translate`)
 
-Assumptions:
-- CRS: EPSG:5070  
-- Resolution: 90 × 90 meters  
-- Fixed spatial extent  
+### Running the Pipeline
 
-Outputs:
-- config/all_layers_raw.csv  
-- config/all_layers_consistent.csv  
-- config/all_layers_inconsistent.csv  
+The pipeline runs in three sequential steps:
 
----
+```r
+# Step 1: Extract metadata from all raw layers
+source("scripts/00a_extract_metadata_one.R")
 
-## Step 01: COG creation
+# Step 2: Convert consistent layers to COGs
+source("scripts/01a_make_cog_one.R")
 
-Convert validated rasters into Cloud Optimized GeoTIFFs.
+# Step 3: Create STAC catalog
+source("scripts/02a_make_stac_one.R")
+```
 
-- Uses metadata CSV to select inputs  
-- No re-extraction of raster metadata  
-- Multithreaded GDAL execution  
+Each script is safe to re-run, skips already-processed files.
 
-Outputs:
-- cogs/<filename>.tif  
+### Testing on Single Files
 
----
+Use the scripts in `scratch/` to test the pipeline on individual files:
 
-## Step 02: STAC generation
+```r
+# Test metadata extraction
+source("scratch/00a_extract_metadata_one.R")
 
-Create minimal STAC Catalog, Collection, and Item records.
+# Test COG conversion
+source("scratch/01a_make_cog_one.R")
 
-- Metadata-driven (no raster I/O)  
-- Extents reprojected from EPSG:5070 to EPSG:4326  
-- STAC Items link directly to COG assets  
+# Test STAC creation
+source("scratch/02a_make_stac_one.R")
+```
 
----
+See the [scratch README](scratch/README.md) for details.
 
-## Current status
+## Data Flow
 
-- Metadata extraction: implemented  
-- COG creation: implemented  
-- STAC prototype: implemented  
-- Optimization experiments: planned  
+```
+Raw GeoTIFFs (data/)
+        │
+        ▼
+┌───────────────────────────┐
+│ 00a_extract_metadata_one.R     │
+│ - Scan all .tif files     │
+│ - Extract raster metadata │
+│ - Classify by type/domain │
+│ - Check consistency       │
+└───────────────────────────┘
+        │
+        ▼
+    config/all_layers_metadata.csv
+        │
+        ▼
+┌───────────────────────────┐
+│ 01a_make_cog_one.R             │
+│ - Read metadata inventory │
+│ - Convert each to COG     │
+│ - Choose resampling method│
+│ - Log conversion results  │
+└───────────────────────────┘
+        │
+        ▼
+    cogs/<data_type>/<domain>/*.tif
+        │
+        ▼
+┌───────────────────────────┐
+│ 02a_make_stac_one.R            │
+│ - Read conversion log     │
+│ - Extract spatial extents │
+│ - Create STAC items       │
+│ - Build catalog/collection│
+└───────────────────────────┘
+        │
+        ▼
+    stac/catalog.json
+    stac/collections/wri_ignitR/
+```
 
+## Output Formats
+
+### Cloud-Optimized GeoTIFFs (COGs)
+
+COGs are GeoTIFFs organized for efficient cloud access:
+
+- **Tiling:** 512×512 pixel blocks
+- **Compression:** DEFLATE (lossless)
+- **Overviews:** Internal pyramids for multi-resolution access
+- **Resampling:** AVERAGE for continuous data, NEAREST for categorical
+
+### STAC Catalog
+
+The STAC catalog provides standardized metadata:
+
+- **Catalog:** Root entry point
+- **Collection:** Groups all WRI layers with shared extent
+- **Items:** One per COG with bounding box, properties, and asset links
+
+## Key Files
+
+| File | Description |
+|------|-------------|
+| `scripts/R/utils.R` | Shared functions used across all scripts |
+| `config/all_layers_metadata.csv` | Clean inventory of all consistent layers |
+| `config/inconsistent_files_metadata.csv` | Layers with resolution/CRS/extent issues |
+| `outputs/validation_reports/cog_conversion_log.csv` | Status of each COG conversion |
+
+## License
+
+Data processing code is open source. The WRI dataset license will be determined upon publication of the underlying research paper.
+
+## Acknowledgments
+
+- Dr. Caitlin Fong and NCEAS for providing the WRI dataset
+- UC Santa Barbara Bren School of Environmental Science & Management
+- MEDS program faculty and staff
