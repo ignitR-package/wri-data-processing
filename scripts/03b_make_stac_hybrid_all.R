@@ -1,12 +1,16 @@
 #!/usr/bin/env Rscript
 # =============================================================================
-# 02c_make_stac_hybrid.R - Create STAC with auto-detection of hosted files
+# 03b_make_stac_hybrid_all.R - Create STAC with auto-detection of hosted files
 #
 # Purpose:
 #   Build a STAC catalog that automatically detects which COGs are hosted on
 #   KNB and uses the appropriate href for each item:
 #     - If hosted on KNB: use KNB URL (for remote access)
 #     - If not hosted: use local file path (for local development)
+#
+#   This is the PRODUCTION script for generating STAC catalogs used by the
+#   fedex R package. It enables gradual migration to hosted COGs without
+#   requiring all files to be uploaded at once.
 #
 # Input:
 #   - metadata/all_layers_consistent.csv (metadata from 00b)
@@ -18,13 +22,18 @@
 #   - stac/collections/<collection_id>/items/<item_id>.json (one per COG)
 #
 # Usage:
-#   Rscript scripts/02c_make_stac_hybrid.R
+#   Rscript scripts/03b_make_stac_hybrid_all.R
+#
+# When to run:
+#   - After uploading new COGs to KNB
+#   - Before updating the fedex package with new STAC catalog
+#   - Periodically to update hosting status as more files are uploaded
 #
 # Notes:
 #   - Checks each file individually via HTTP HEAD request to KNB
 #   - Creates a "hybrid" STAC with mixed URL types during transition period
-#   - This is ideal while gradually uploading files to KNB
-#   - Once all files are hosted, use 02b_make_stac_all.R with use_knb_urls=TRUE
+#   - Safe to re-run: skips existing STAC items
+#   - Network-dependent: requires connection to KNB for status checks
 # =============================================================================
 
 library(readr)

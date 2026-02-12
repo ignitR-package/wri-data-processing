@@ -51,39 +51,40 @@ Tests COG conversion on a single GeoTIFF.
 
 ### `02a_make_stac_one.R`
 
-Tests STAC metadata creation for a single COG.
+Tests STAC metadata creation for a single COG with local file path.
 
 **To use:**
 1. First run `01a_make_cog_one.R` to create a test COG
 2. Edit the `cog_path` variable to point to your test COG
-3. Run: `source("scratch/02a_make_stac_one.R")`
+3. Run: `source("prototypes/02a_make_stac_one.R")`
 4. Check the output in `stac/`
 
-**Output:** Complete STAC structure (catalog, collection, one item)
+**Output:** Complete STAC structure (catalog, collection, one item with local path)
 
 **What it shows:**
 - Spatial extent extraction and WGS84 transformation
-- STAC JSON structure
+- STAC JSON structure with local file href
 - Full item JSON preview in console
 
 ## Relationship to Production Scripts
 
-| Scratch Script | Production Script | Key Differences |
-|----------------|-------------------|-----------------|
-| `00a_extract_metadata_one.R` | `scripts/00a_extract_metadata_one.R` | Single file, console output only |
-| `01a_make_cog_one.R` | `scripts/01a_make_cog_one.R` | Single file, no logging |
-| `02a_make_stac_one.R` | `scripts/02a_make_stac_one.R` | Single item, hardcoded properties |
+| Prototype Script | Production Script | Key Differences |
+|------------------|-------------------|-----------------|
+| `00a_extract_metadata_one.R` | `scripts/00b_extract_metadata_all.R` | Single file vs. all files |
+| `01a_make_cog_one.R` | `scripts/01b_make_cog_all.R` | Single file vs. parallel batch |
+| `02a_make_stac_one.R` | `scripts/02b_make_stac_all.R` | Single item (local) vs. all items (local) |
+| *(no prototype)* | `scripts/03b_make_stac_hybrid_all.R` | N/A (production-only feature) |
 
-Both versions use the same shared functions from `scripts/R/utils.R`.
+All versions use the same shared functions from `scripts/R/utils.R`.
 
 ## Development Workflow
 
 When making changes to the processing pipeline:
 
-1. **Test on scratch first**
+1. **Test on prototype first**
    ```r
-   # Modify scratch/00a_extract_metadata_one.R with your changes
-   source("scratch/00a_extract_metadata_one.R")
+   # Modify prototypes/00a_extract_metadata_one.R with your changes
+   source("prototypes/00a_extract_metadata_one.R")
    # Verify output looks correct
    ```
 
@@ -100,19 +101,19 @@ When making changes to the processing pipeline:
 ```r
 # 1. Check metadata
 test_file <- "data/species/indicators/species_resistance_richness.tif"
-source("scratch/00a_extract_metadata_one.R")
+source("prototypes/00a_extract_metadata_one.R")
 # Look at output - is it classified correctly?
 # What resampling method does it recommend?
 
 # 2. Convert to COG
 input_tif <- "data/species/indicators/species_resistance_richness.tif"
-source("scratch/01a_make_cog_one.R")
+source("prototypes/01a_make_cog_one.R")
 # Check compression ratio
 # Verify gdalinfo shows correct structure
 
 # 3. Create STAC item
 cog_path <- "cogs/species_resistance_richness.tif"
-source("scratch/02a_make_stac_one.R")
+source("prototypes/02a_make_stac_one.R")
 # Inspect the JSON output
 # Verify bbox looks reasonable
 ```

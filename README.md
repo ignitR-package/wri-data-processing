@@ -14,9 +14,10 @@ Raw GeoTIFFs
 → Metadata CSVs (source of truth)
 → COG creation (01a / 01b)
 → COGs
-→ STAC generation (02a / 02b / 02c)
-→ Upload to KNB (when ready)
-→ STAC with hosted URLs
+→ STAC generation - local (02a / 02b)
+→ Upload to KNB (manual)
+→ STAC generation - hybrid (03b)
+→ STAC with hosted URLs for production
 ```
 
 ---
@@ -36,17 +37,21 @@ Raw GeoTIFFs
 ```
 wri-data-processing/
 ├── data/              # Raw input GeoTIFFs
-├── config/            # Metadata CSVs (source of truth)
+├── metadata/          # Metadata CSVs (source of truth)
 ├── cogs/              # Output Cloud Optimized GeoTIFFs
-├── stac/              # STAC catalog (local file paths - for development)
-├── scratch_output/
-│   └── stac_hosted/   # STAC catalog (KNB URLs - for production)
-├── prototypes/        # Single-file test scripts (*a.R)
-│   └── 02c_make_stac_one_hosted.R  # Hosted URL STAC prototype
+├── stac/              # STAC catalog (auto-detected URLs - for production)
+├── scratch_output/    # Temporary/intermediate outputs
+├── prototypes/        # Single-file workflow tests (*a.R)
+│   ├── 00a_extract_metadata_one.R
+│   ├── 01a_make_cog_one.R
+│   └── 02a_make_stac_one.R
+├── experiments/       # Performance testing, benchmarks, optimization
+│   └── test_cog_settings_benchmark.R
 └── scripts/           # Batch processing scripts (*b.R)
     ├── 00b_extract_metadata_all.R
     ├── 01b_make_cog_all.R
-    └── 02b_make_stac_all.R  # Has use_knb_urls flag
+    ├── 02b_make_stac_all.R         # Local paths only (development)
+    └── 03b_make_stac_hybrid_all.R  # Auto-detect hosted (production)
 ```
 
 ---
@@ -98,79 +103,111 @@ Convert validated rasters into Cloud Optimized GeoTIFFs.
 
 ---
 
-## Step 02: STAC Generation
+## Step 02: STAC Generation (Local Development)
 
-Create minimal STAC Catalog, Collection, and Item records for data discovery.
+Create STAC Catalog with local file paths for development and testing.
 
-### Local vs Hosted Workflows
+### Purpose
 
-#### Local Development (Default)
+Generate a STAC catalog that uses **local file paths** for all COG assets. This is ideal for:
+- Local package development
+- Testing STAC structure and metadata
+- Iterating on data processing without network dependencies
 
-For testing and development, STAC items point to **local file paths**:
+### Script
 
-```r
-# scripts/02b_make_stac_all.R (default)
-use_knb_urls <- FALSE
-```
+- **02a_make_stac_one.R** - Prototype: STAC for one local layer
+- **02b_make_stac_all.R** - Production: STAC for all local layers
 
-**Outputs:** `stac/` directory with relative file paths
-
-**Use case:** Package development, local testing, debugging
-
-#### Hosted Production (KNB)
-
-For production deployment, STAC items point to **KNB URLs**:
-
-```r
-# scripts/02b_make_stac_all.R (set to TRUE)
-use_knb_urls <- TRUE
-knb_base_url <- "https://knb.ecoinformatics.org/data/"
-```
-
-**Outputs:** `scratch_output/stac_hosted/` directory with KNB URLs
-
-**Use case:** After uploading COGs to KNB, generate STAC for the `fedex` R package
-
-### Scripts
-
-- **02a_make_stac_one.R** - Prototype: local file STAC for one layer
-- **02c_make_stac_one_hosted.R** - Prototype: KNB URL STAC for one layer (WRI_score)
-- **02b_make_stac_all.R** - Production: all layers with `use_knb_urls` flag
-
-### Single Hosted File - Testing Workflow
-
-Currently only **WRI_score.tif** is hosted on KNB. To generate its STAC:
+### Usage
 
 ```bash
-# Generate single-item STAC with KNB URL
-Rscript prototypes/02c_make_stac_one_hosted.R
+# After running 00b and 01b
+Rscript scripts/02b_make_stac_all.R
 ```
 
-This creates `scratch_output/stac_hosted/` with:
-- Catalog, Collection, and Item (WRI_score.json only)
-- Asset URL: `https://knb.ecoinformatics.org/data/WRI_score.tif`
+**Outputs:** `stac/` directory with relative file paths (e.g., `../cogs/WRI_score.tif`)
 
-**Purpose:** Used by `fedex` package during development for testing COG streaming from KNB.
+**Use case:** Development only - files must exist locally to be accessed
 
-### Scaling to All Hosted Files
+---
 
-When all COGs are uploaded to KNB:
+## Step 03: STAC Generation (Hybrid Production)
 
-1. **Upload all COGs to KNB** and note their URLs
-2. **Verify filenames match** metadata CSV (e.g., `WRI_score.tif`, `aspect.tif`)
-3. **Edit** `scripts/02b_make_stac_all.R`:
-   ```r
-   use_knb_urls <- TRUE  # Change from FALSE
-   ```
-4. **Run batch STAC generation:**
-   ```bash
-   Rscript scripts/02b_make_stac_all.R
-   ```
-5. **Copy to fedex package:**
-   ```bash
-   cp -r scratch_output/stac_hosted/* /path/to/fedex/inst/extdata/stac/
-   ```
-6. **Update fedex and release new version**
+Create STAC Catalog with auto-detected hosted URLs for production deployment.
+
+### Purpose
+
+Generate a STAC catalog that **automatically detects** which COGs are hosted on KNB and uses appropriate URLs:
+- ✅ **Hosted files** → KNB URL (e.g., `https://knb.ecoinformatics.org/data/WRI_score.tif`)
+- ❌ **Non-hosted files** → Local path (e.g., `../cogs/elevation.tif`)
+
+This is the **production script** for the `fedex` R package.
+
+### Script
+
+- **03b_make_stac_hybrid_all.R** - Production: auto-detect hosted files
+
+### How It Works
+
+1. Checks each COG file individually via HTTP HEAD request to KNB
+2. If file returns 200 status → uses KNB URL
+3. If file returns 404 or timeout → uses local path
+4. Adds `is_hosted: true/false` property to each STAC item for debugging
+
+### Usage
+
+```bash
+# After uploading some/all COGs to KNB
+Rscript scripts/03b_make_stac_hybrid_all.R
+```
+
+**Example output:**
+```
+=== Checking which files are hosted on KNB ===
+[1/82] Checking: WRI_score.tif ... ✓ HOSTED
+[2/82] Checking: elevation.tif ... ✗ not hosted
+...
+
+=== Hosting Summary ===
+  Total files:   82
+  Hosted on KNB: 15
+  Local only:    67
+```
+
+**Outputs:** `stac/` directory with mixed hrefs
+
+**Use case:** Production - copy to `fedex/inst/extdata/stac/` for package distribution
+
+### Typical Workflow
+
+```bash
+# 1. Upload files to KNB (manual, via DataONE portal or API)
+#    Upload as you go - no need to wait for all files
+
+# 2. Generate hybrid STAC
+Rscript scripts/03b_make_stac_hybrid_all.R
+
+# 3. Copy to fedex package
+cp -r stac/* ../fedex/inst/extdata/stac/
+
+# 4. Test in fedex
+cd ../fedex
+devtools::load_all()
+
+# Try a hosted file
+get_layer("WRI_score", bbox = c(-122, 37, -121, 38))  # ✓ Streams from KNB
+
+# Try a non-hosted file
+get_layer("elevation", bbox = c(-122, 37, -121, 38))  # ✗ Error with helpful message
+```
+
+### When to Rerun
+
+- ✅ After uploading new COGs to KNB (updates hosted status)
+- ✅ When URLs change or files are renamed
+- ✅ Before releasing a new version of `fedex` package
+- ❌ Not needed if only local files changed
 
 ---
 
@@ -218,15 +255,14 @@ slope.tif
 
 - ✅ Metadata extraction (all 82 layers)
 - ✅ COG creation (all 82 layers, 7 overview levels each)
-- ✅ STAC prototype (local paths)
-- ✅ Single hosted STAC (WRI_score only)
-- ✅ Batch STAC with hosted URL flag
+- ✅ STAC for local development (02b)
+- ✅ STAC with hybrid URL detection (03b)
 - ✅ COG streaming verification from KNB
 
 ### In Progress
 
-- 🔄 Uploading remaining 81 COGs to KNB
-- 🔄 Generating full hosted STAC catalog
+- 🔄 Uploading COGs to KNB (gradual process)
+- 🔄 Testing fedex package with hybrid STAC
 
 ### Planned
 
@@ -268,19 +304,25 @@ slope.tif
 
 ## Integration with `fedex` R Package
 
-The `fedex` package uses the **hosted STAC** catalog:
+The `fedex` package uses the **hybrid STAC** catalog generated by step 03:
 
-1. STAC generated here → `scratch_output/stac_hosted/`
+1. STAC generated here → `stac/` (via 03b_make_stac_hybrid_all.R)
 2. Copied to fedex → `fedex/inst/extdata/stac/`
 3. Ships with package → Users access via `system.file()`
-4. `get_layer()` reads STAC → Streams COG from KNB
+4. `get_layer()` reads STAC → Streams COG from KNB (if hosted) or shows helpful error (if not)
 
 **Workflow:**
 ```r
 # In fedex package
 library(fedex)
+
+# Hosted files stream from KNB
 wri <- get_layer('WRI_score', bbox = c(-122, 37, -121, 38))
-# → Reads STAC item → Gets KNB URL → Streams tiles via HTTP ranges
+# → Reads STAC item → Detects is_hosted=TRUE → Streams tiles via HTTP ranges
+
+# Non-hosted files show helpful error
+elev <- get_layer('elevation', bbox = c(-122, 37, -121, 38))
+# → Reads STAC item → Detects is_hosted=FALSE → Returns informative error message
 ```
 
 ---
@@ -365,8 +407,8 @@ Before uploading COGs to KNB:
 🔄 **Scaling to full KNB hosting** requires uploading remaining files and flipping flag
 
 **Next Steps:**
-1. Upload all 82 COGs to KNB
-2. Set `use_knb_urls = TRUE` in `02b_make_stac_all.R`
-3. Run batch STAC generation
-4. Copy to `fedex/inst/extdata/stac/`
-5. Release `fedex` v1.0 with full hosted STAC
+1. Continue uploading COGs to KNB (gradual process)
+2. Rerun `03b_make_stac_hybrid_all.R` periodically to update hosting status
+3. Copy updated STAC to `fedex/inst/extdata/stac/`
+4. Release `fedex` updates as more files become hosted
+5. Eventually: All files hosted → Full remote COG streaming capability

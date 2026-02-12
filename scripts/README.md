@@ -6,13 +6,18 @@ This folder contains the production pipeline for processing the Wildfire Resilie
 
 ## Workflow Overview
 
-The pipeline runs in three sequential steps:
+The pipeline runs in sequential steps:
 
 ```
 00b_extract_metadata_all.R  →  01b_make_cog_all.R  →  02b_make_stac_all.R
+                                                       ↓
+                                          [Upload COGs to KNB]
+                                                       ↓
+                                          03b_make_stac_hybrid_all.R
 ```
 
-Each script reads the output of the previous step, so they must be run in order.
+- **Steps 00-02** must run in order (each depends on the previous output)
+- **Step 03** runs independently after manual file uploads to KNB
 
 ## Scripts
 
@@ -84,27 +89,56 @@ All functions include roxygen-style documentation.
 
 **Run time:** ~2-4 hours for full dataset (CPU-intensive)
 
-### `02b_make_stac_all.R` — STAC Catalog Creation
+### `02b_make_stac_all.R` — STAC Catalog Creation (Local)
 
-**Purpose:** Generate STAC metadata for discovery and access.
+**Purpose:** Generate STAC metadata with local file paths for development.
 
 **Inputs:**
-- `outputs/validation_reports/cog_conversion_log.csv` (from step 01)
+- `metadata/all_layers_consistent.csv` (from step 00)
 - COG files in `cogs/` directory
 
 **Outputs:**
 - `stac/catalog.json` — Root STAC catalog
 - `stac/collections/wri_ignitR/collection.json` — WRI collection
-- `stac/collections/wri_ignitR/items/*.json` — One item per COG
+- `stac/collections/wri_ignitR/items/*.json` — One item per COG (local paths)
 
 **Key behaviors:**
-- Extracts spatial extent from each COG and transforms to WGS84
-- Records COG creation parameters in item properties
-- Computes collection extent as union of all items
+- Uses relative local file paths for all assets (e.g., `../cogs/WRI_score.tif`)
+- Extracts spatial extent from metadata and transforms to WGS84
+- Adds WRI classification properties (domain, data_type, layer_type)
 - Safe to re-run: skips existing items
-- Saves progress every 25 items
+- No network calls (fast)
 
-**Run time:** ~10-30 minutes for full dataset
+**Run time:** ~1-5 minutes for full dataset
+
+### `03b_make_stac_hybrid_all.R` — STAC Catalog Creation (Production)
+
+**Purpose:** Generate STAC metadata with auto-detected KNB URLs for production.
+
+**Inputs:**
+- `metadata/all_layers_consistent.csv` (from step 00)
+- COG files in `cogs/` directory (for local fallback)
+- KNB data repository (via HTTP HEAD requests)
+
+**Outputs:**
+- `stac/catalog.json` — Root STAC catalog
+- `stac/collections/wri_ignitR/collection.json` — WRI collection
+- `stac/collections/wri_ignitR/items/*.json` — One item per COG (mixed URLs)
+
+**Key behaviors:**
+- Checks each file individually via HTTP HEAD to `https://knb.ecoinformatics.org/data/<filename>`
+- Uses KNB URL if file returns 200 status (hosted)
+- Uses local path if file returns 404 or timeout (not hosted)
+- Adds `is_hosted: true/false` property to each STAC item
+- Safe to re-run: skips existing items
+- Network calls (slower than 02b)
+
+**Run time:** ~5-15 minutes for full dataset (depends on network speed)
+
+**When to use:**
+- After uploading any COGs to KNB
+- Before copying STAC to `fedex` package
+- Periodically as more files become hosted
 
 ## Running the Pipeline
 
@@ -113,14 +147,22 @@ All functions include roxygen-style documentation.
 ```r
 # From the repository root:
 
-# Step 1: Extract metadata (do this first)
+# Step 00: Extract metadata (do this first)
 source("scripts/00b_extract_metadata_all.R")
 
-# Step 2: Convert to COGs
+# Step 01: Convert to COGs
 source("scripts/01b_make_cog_all.R")
 
-# Step 3: Create STAC catalog
+# Step 02: Create STAC catalog (local development)
 source("scripts/02b_make_stac_all.R")
+
+# [Manual step: Upload COGs to KNB via DataONE portal or API]
+
+# Step 03: Create STAC catalog (production with hosted URLs)
+source("scripts/03b_make_stac_hybrid_all.R")
+
+# Copy to fedex package
+system("cp -r stac/* ../fedex/inst/extdata/stac/")
 ```
 
 ### Checking Progress
@@ -142,11 +184,20 @@ fs::dir_ls("stac/collections/wri_ignitR/items/")
 
 All scripts are designed to resume from where they left off:
 
-- **00:** Reads existing `config/all_layers_raw.csv` and skips processed files
+- **00:** Reads existing metadata CSV and skips processed files
 - **01:** Checks for existing COGs before converting
 - **02:** Checks for existing STAC items before creating
+- **03:** Checks for existing STAC items before creating; re-checks hosting status
 
 Just run the script again — no need to start over.
+
+### When to Rerun Step 03
+
+You should rerun `03b_make_stac_hybrid_all.R` when:
+- ✅ You've uploaded new files to KNB
+- ✅ Before updating the `fedex` package
+- ✅ When testing hosting status changes
+- ❌ Not needed if only local files changed
 
 ## Dependencies
 
