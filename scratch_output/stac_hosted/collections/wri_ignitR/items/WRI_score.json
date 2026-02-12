@@ -1,7 +1,7 @@
 {
   "stac_version": "1.0.0",
   "type": "Feature",
-  "id": "livelihoods_domain_score",
+  "id": "WRI_score",
   "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -17,14 +17,13 @@
   "properties": {
     "datetime": "2026-06-05T00:00:00Z",
     "proj:epsg": 5070,
-    "data_type": "aggregate",
-    "wri_domain": "livelihoods",
-    "wri_layer_type": "domain_score",
-    "is_hosted": false
+    "data_type": "final_score",
+    "wri_domain": "unknown",
+    "wri_layer_type": null
   },
   "assets": {
     "data": {
-      "href": "../cogs/livelihoods_domain_score.tif",
+      "href": "https://knb.ecoinformatics.org/data/WRI_score.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "roles": [
         "data"
@@ -35,7 +34,7 @@
   "links": [
     {
       "rel": "self",
-      "href": "collections/wri_ignitR/items/livelihoods_domain_score.json",
+      "href": "collections/wri_ignitR/items/WRI_score.json",
       "type": "application/geo+json"
     },
     {
