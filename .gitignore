@@ -58,3 +58,5 @@ outputs/validation_reports/*
 # Cog files
 **/cogs/
 
+# vs code settings
+.vscode/
