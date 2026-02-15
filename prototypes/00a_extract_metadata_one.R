@@ -67,6 +67,7 @@ cat("Assumptions verified for:", basename(test_file), "\n")
 info$data_type <- classify_data_type(test_file)
 info$wri_domain <- extract_domain(test_file)
 info$wri_layer_type <- classify_layer_type(info$data_type, info$filename)
+info$cog_filename <- make_cog_filename(test_file)
 
 # Save
 layer_name <- tools::file_path_sans_ext(info$filename)

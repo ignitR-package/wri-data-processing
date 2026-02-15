@@ -34,6 +34,11 @@
       "rel": "parent",
       "href": "catalog.json",
       "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "collections/wri_ignitR/items/WRI_score.json",
+      "type": "application/geo+json"
     }
   ]
 }

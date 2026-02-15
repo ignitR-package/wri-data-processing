@@ -19,7 +19,8 @@
     "proj:epsg": 5070,
     "data_type": "aggregate",
     "wri_domain": "communities",
-    "wri_layer_type": "domain_score"
+    "wri_layer_type": "domain_score",
+    "is_hosted": false
   },
   "assets": {
     "data": {

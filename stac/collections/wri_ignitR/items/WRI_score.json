@@ -19,11 +19,12 @@
     "proj:epsg": 5070,
     "data_type": "final_score",
     "wri_domain": "unknown",
-    "wri_layer_type": null
+    "wri_layer_type": null,
+    "is_hosted": true
   },
   "assets": {
     "data": {
-      "href": "../cogs/WRI_score.tif",
+      "href": "https://knb.ecoinformatics.org/data/WRI_score.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "roles": [
         "data"

@@ -19,7 +19,8 @@
     "proj:epsg": 5070,
     "data_type": "indicator",
     "wri_domain": "iconic_species",
-    "wri_layer_type": "status"
+    "wri_layer_type": "status",
+    "is_hosted": false
   },
   "assets": {
     "data": {
