@@ -58,6 +58,7 @@ catalog <- list(
   stac_version = "1.0.0",
   type = "Catalog",
   id = "wri-catalog",
+  title = "WRI Wildfire Resilience Index",
   description = "WRI raster layers as COGs",
   links = list(
     list(rel = "self", href = "catalog.json", type = "application/json"),
@@ -67,31 +68,44 @@ catalog <- list(
 
 collection <- list(
   stac_version = "1.0.0",
+  stac_extensions = list("https://stac-extensions.github.io/projection/v1.1.0/schema.json"),
   type = "Collection",
   id = collection_id,
+  title = "WRI ignitR Dataset",
   description = "WRI raster layers (COGs)",
   license = "proprietary",
   extent = list(
     spatial = list(bbox = list(spatial$bbox)),
     temporal = list(interval = list(list(item_datetime, item_datetime)))
   ),
+  summaries = list(
+    data_type = list("aggregate", "final_score", "indicator"),
+    wri_domain = list(
+      "air_quality", "communities", "iconic_places", "iconic_species",
+      "infrastructure", "livelihoods", "natural_habitats", "sense_of_place",
+      "species", "unknown", "water"
+    ),
+    wri_layer_type = list("domain_score", "recovery", "resilience", "resistance", "status"),
+    "proj:code" = list("EPSG:5070")
+  ),
   links = list(
     list(rel = "self", href = path_rel(collection_path, start = stac_root), type = "application/json"),
     list(rel = "root", href = "catalog.json", type = "application/json"),
-    list(rel = "parent", href = "catalog.json", type = "application/json"),
-    list(rel = "item", href = path_rel(item_path, start = stac_root), type = "application/geo+json")
+    list(rel = "parent", href = "catalog.json", type = "application/json")
   )
 )
 
 item <- list(
   stac_version = "1.0.0",
+  stac_extensions = list("https://stac-extensions.github.io/projection/v1.1.0/schema.json"),
   type = "Feature",
   id = item_id,
+  collection = collection_id,
   geometry = spatial$geometry,
   bbox = spatial$bbox,
   properties = list(
     datetime = item_datetime,
-    "proj:epsg" = as.integer(row$crs_epsg),
+    "proj:code" = paste0("EPSG:", row$crs_epsg),
     data_type = row$data_type,
     wri_domain = row$wri_domain,
     wri_layer_type = row$wri_layer_type
