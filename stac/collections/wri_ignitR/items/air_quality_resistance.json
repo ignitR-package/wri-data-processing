@@ -19,7 +19,8 @@
     "proj:epsg": 5070,
     "data_type": "aggregate",
     "wri_domain": "air_quality",
-    "wri_layer_type": "resistance"
+    "wri_layer_type": "resistance",
+    "is_hosted": false
   },
   "assets": {
     "data": {

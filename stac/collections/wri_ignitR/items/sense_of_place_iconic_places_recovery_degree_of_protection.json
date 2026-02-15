@@ -19,7 +19,8 @@
     "proj:epsg": 5070,
     "data_type": "indicator",
     "wri_domain": "iconic_places",
-    "wri_layer_type": "recovery"
+    "wri_layer_type": "recovery",
+    "is_hosted": false
   },
   "assets": {
     "data": {

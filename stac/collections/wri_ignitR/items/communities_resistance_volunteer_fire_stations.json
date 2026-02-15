@@ -19,7 +19,8 @@
     "proj:epsg": 5070,
     "data_type": "indicator",
     "wri_domain": "communities",
-    "wri_layer_type": "resistance"
+    "wri_layer_type": "resistance",
+    "is_hosted": false
   },
   "assets": {
     "data": {
