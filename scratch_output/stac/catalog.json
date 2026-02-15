@@ -2,6 +2,7 @@
   "stac_version": "1.0.0",
   "type": "Catalog",
   "id": "wri-catalog",
+  "title": "WRI Wildfire Resilience Index",
   "description": "WRI raster layers as COGs",
   "links": [
     {

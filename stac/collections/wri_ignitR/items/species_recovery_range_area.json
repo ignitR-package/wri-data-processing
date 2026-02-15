@@ -1,7 +1,11 @@
 {
   "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json"
+  ],
   "type": "Feature",
   "id": "species_recovery_range_area",
+  "collection": "wri_ignitR",
   "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -16,7 +20,7 @@
   "bbox": [-146.2082, 19.1074, 173.7109, 54.8056],
   "properties": {
     "datetime": "2026-06-05T00:00:00Z",
-    "proj:epsg": 5070,
+    "proj:code": "EPSG:5070",
     "data_type": "indicator",
     "wri_domain": "species",
     "wri_layer_type": "recovery",
