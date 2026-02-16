@@ -1,0 +1,73 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json"
+  ],
+  "type": "Collection",
+  "id": "wri_ignitR",
+  "title": "WRI ignitR Dataset",
+  "description": "WRI raster layers (COGs)",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [-146.2082, 19.1074, 173.7109, 54.8056]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-06-05T00:00:00Z",
+          "2026-06-05T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "summaries": {
+    "data_type": [
+      "aggregate",
+      "final_score",
+      "indicator"
+    ],
+    "wri_domain": [
+      "air_quality",
+      "communities",
+      "iconic_places",
+      "iconic_species",
+      "infrastructure",
+      "livelihoods",
+      "natural_habitats",
+      "sense_of_place",
+      "species",
+      "unknown",
+      "water"
+    ],
+    "wri_layer_type": [
+      "domain_score",
+      "recovery",
+      "resilience",
+      "resistance",
+      "status"
+    ],
+    "proj:code": [
+      "EPSG:5070"
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "collections/wri_ignitR/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "catalog.json",
+      "type": "application/json"
+    }
+  ]
+}
