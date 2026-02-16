@@ -6,16 +6,14 @@ This folder contains the production pipeline for processing the Wildfire Resilie
 
 The pipeline runs in sequential steps:
 
-```
+```text
 00b_extract_metadata_all.R  →  01b_make_cog_all.R  →  02b_make_stac_all.R
-                                                       ↓
-                                          [Upload COGs to KNB]
-                                                       ↓
-                                          03b_make_stac_hybrid_all.R
+                                                              ↑
+                                                   (rerun after uploading
+                                                    COGs to KNB)
 ```
 
-- **Steps 00-02** must run in order (each depends on the previous output)
-- **Step 03** runs independently after manual file uploads to KNB
+Steps must run in order (each depends on the previous output). Step 02 can be rerun at any time to refresh hosting status after uploading files to KNB.
 
 ## Scripts
 
@@ -81,61 +79,43 @@ All functions include roxygen-style documentation.
 
 **Run time:** Varies based on dataset size and system resources
 
-### `02b_make_stac_all.R` — STAC Catalog Creation (Local)
+### `02b_make_stac_all.R` — STAC Catalog Creation
 
-**Purpose:** Generate STAC metadata with local file paths for development.
+**Purpose:** Generate STAC metadata with auto-detected KNB URLs.
 
 **Inputs:**
+
 - `metadata/all_layers_consistent.csv` (from step 00)
 - COG files in `cogs/` directory
-
-**Outputs:**
-- `stac/catalog.json` — Root STAC catalog
-- `stac/collections/wri_ignitR/collection.json` — WRI collection
-- `stac/collections/wri_ignitR/items/*.json` — One item per COG (local relative paths)
-
-**Key behaviors:**
-- Uses relative local file paths for all assets (e.g., `../cogs/<filename>.tif`)
-- Transforms spatial extent from EPSG:5070 to EPSG:4326 for STAC compliance
-- Adds WRI classification properties (`data_type`, `wri_domain`, `wri_layer_type`)
-- Adds projection extension (`proj:epsg`)
-- Single datetime for all items: `2026-06-05T00:00:00Z` (project due date)
-- Safe to re-run: skips existing items
-- No network calls (fast)
-
-**Run time:** Fast (no raster I/O, just JSON generation)
-
-### `03b_make_stac_hybrid_all.R` — STAC Catalog Creation (Production)
-
-**Purpose:** Generate STAC metadata with auto-detected KNB URLs for production.
-
-**Inputs:**
-- `metadata/all_layers_consistent.csv` (from step 00)
-- COG files in `cogs/` directory (for local fallback)
 - KNB data repository (via HTTP HEAD requests)
 
 **Outputs:**
+
 - `stac/catalog.json` — Root STAC catalog
 - `stac/collections/wri_ignitR/collection.json` — WRI collection
 - `stac/collections/wri_ignitR/items/*.json` — One item per COG (mixed URLs)
 
 **Key behaviors:**
+
 - Checks each file individually via HTTP HEAD request to `https://knb.ecoinformatics.org/data/<filename>`
 - Uses KNB URL if file returns 200-299 status (hosted on KNB)
 - Uses local relative path if file returns error or timeout (not hosted)
 - Adds `is_hosted: true/false` property to each STAC item
+- Transforms spatial extent from EPSG:5070 to EPSG:4326 for STAC compliance
+- Adds WRI classification properties (`data_type`, `wri_domain`, `wri_layer_type`)
+- Adds projection extension (`proj:epsg`)
+- Single datetime for all items: `2026-06-05T00:00:00Z` (project due date)
 - HTTP timeout: 5 seconds per file
-- Prints hosting status summary and lists all hosted files
 - Safe to re-run: skips existing items
-- Network-dependent (slower than 02b)
+- Network-dependent
 
 **Run time:** Depends on number of files and network speed (makes HTTP HEAD request per file)
 
-**When to use:**
+**When to rerun:**
+
 - After uploading new COGs to KNB
 - Before copying STAC to `fedex` package
 - Periodically as more files become hosted
-- To verify current hosting status
 
 ## Running the Pipeline
 
@@ -150,16 +130,13 @@ source("scripts/00b_extract_metadata_all.R")
 # Step 01: Convert to COGs
 source("scripts/01b_make_cog_all.R")
 
-# Step 02: Create STAC catalog (local development)
+# Step 02: Create STAC catalog (auto-detects hosted vs local)
 source("scripts/02b_make_stac_all.R")
-
-# [Manual step: Upload COGs to KNB via DataONE portal or API]
-
-# Step 03: Create STAC catalog (production with hosted URLs)
-source("scripts/03b_make_stac_hybrid_all.R")
 
 # Copy to fedex package
 system("cp -r stac/* ../fedex/inst/extdata/stac/")
+
+# After uploading more COGs to KNB, rerun step 02 to refresh hosting status
 ```
 
 ### Checking Progress
@@ -186,18 +163,9 @@ All scripts are designed to resume from where they left off:
 
 - **00:** Reads existing `metadata/all_layers_raw.csv` and skips previously processed files
 - **01:** Checks for existing COG files before converting
-- **02:** Checks for existing STAC item JSON files before creating
-- **03:** Checks for existing STAC items before creating; re-checks KNB hosting status on each run
+- **02:** Checks for existing STAC item JSON files before creating; re-checks KNB hosting status on each run
 
 Just run the script again — no need to start over.
-
-### When to Rerun Step 03
-
-You should rerun `03b_make_stac_hybrid_all.R` when:
-- ✅ You've uploaded new files to KNB
-- ✅ Before updating the `fedex` package
-- ✅ When testing hosting status changes
-- ❌ Not needed if only local files changed
 
 ## Dependencies
 

@@ -72,8 +72,7 @@ Tests STAC metadata creation for a single COG with local file path.
 |------------------|-------------------|-----------------|
 | `00a_extract_metadata_one.R` | `scripts/00b_extract_metadata_all.R` | Single file vs. all files |
 | `01a_make_cog_one.R` | `scripts/01b_make_cog_all.R` | Single file vs. parallel batch |
-| `02a_make_stac_one.R` | `scripts/02b_make_stac_all.R` | Single item (local) vs. all items (local) |
-| *(no prototype)* | `scripts/03b_make_stac_hybrid_all.R` | N/A (production-only feature) |
+| `02a_make_stac_one.R` | `scripts/02b_make_stac_all.R` | Single item (local path) vs. all items (auto-detects hosted) |
 
 All versions use the same shared functions from `scripts/R/utils.R`.
 
