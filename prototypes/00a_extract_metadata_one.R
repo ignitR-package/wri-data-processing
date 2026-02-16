@@ -25,7 +25,7 @@ source("scripts/R/utils.R")
 
 # --- Config -------------------------------------------------------------------
 
-test_file <- "data/livelihoods/livelihoods_domain_score.tif"
+test_file <- "data/WRI_score.tif"
 out_dir   <- "scratch_output"
 
 # Expected values (project assumptions)

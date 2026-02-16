@@ -14,7 +14,7 @@ source("scripts/R/utils.R")
 
 # --- Config -------------------------------------------------------------------
 
-meta_csv <- "metadata/all_layers_consistent.csv"
+meta_csv <- "scratch_output/WRI_score_metadata.csv"
 target_filename <- "WRI_score.tif"
 cogs_dir <- "cogs"
 stac_root <- "scratch_output/stac"

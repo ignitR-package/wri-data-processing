@@ -42,7 +42,7 @@
       "unknown",
       "water"
     ],
-    "wri_layer_type": [
+    "wri_dimension": [
       "domain_score",
       "recovery",
       "resilience",

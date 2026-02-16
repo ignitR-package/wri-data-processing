@@ -23,7 +23,7 @@
     "proj:code": "EPSG:5070",
     "data_type": "aggregate",
     "wri_domain": "air_quality",
-    "wri_layer_type": "domain_score",
+    "wri_dimension": "domain_score",
     "is_hosted": false
   },
   "assets": {

@@ -23,7 +23,7 @@
     "proj:code": "EPSG:5070",
     "data_type": "aggregate",
     "wri_domain": "sense_of_place",
-    "wri_layer_type": "resilience",
+    "wri_dimension": "resilience",
     "is_hosted": false
   },
   "assets": {

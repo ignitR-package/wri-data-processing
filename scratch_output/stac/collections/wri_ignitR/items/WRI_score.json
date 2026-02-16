@@ -23,7 +23,7 @@
     "proj:code": "EPSG:5070",
     "data_type": "final_score",
     "wri_domain": "unknown",
-    "wri_layer_type": null
+    "wri_dimension": null
   },
   "assets": {
     "data": {

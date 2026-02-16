@@ -23,7 +23,7 @@
     "proj:code": "EPSG:5070",
     "data_type": "indicator",
     "wri_domain": "communities",
-    "wri_layer_type": "recovery",
+    "wri_dimension": "recovery",
     "is_hosted": false
   },
   "assets": {

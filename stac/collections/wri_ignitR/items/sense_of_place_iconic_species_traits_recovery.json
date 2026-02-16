@@ -23,7 +23,7 @@
     "proj:code": "EPSG:5070",
     "data_type": "indicator",
     "wri_domain": "iconic_species",
-    "wri_layer_type": null,
+    "wri_dimension": null,
     "is_hosted": false
   },
   "assets": {

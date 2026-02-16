@@ -23,7 +23,7 @@
     "proj:code": "EPSG:5070",
     "data_type": "aggregate",
     "wri_domain": "air_quality",
-    "wri_layer_type": "resistance",
+    "wri_dimension": "resistance",
     "is_hosted": false
   },
   "assets": {

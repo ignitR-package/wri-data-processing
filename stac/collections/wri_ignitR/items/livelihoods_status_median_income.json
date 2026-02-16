@@ -23,7 +23,7 @@
     "proj:code": "EPSG:5070",
     "data_type": "indicator",
     "wri_domain": "livelihoods",
-    "wri_layer_type": "status",
+    "wri_dimension": "status",
     "is_hosted": false
   },
   "assets": {

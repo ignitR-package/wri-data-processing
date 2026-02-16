@@ -23,7 +23,7 @@
     "proj:code": "EPSG:5070",
     "data_type": "indicator",
     "wri_domain": "water",
-    "wri_layer_type": "resistance",
+    "wri_dimension": "resistance",
     "is_hosted": false
   },
   "assets": {
