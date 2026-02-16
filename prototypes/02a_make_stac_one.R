@@ -85,7 +85,7 @@ collection <- list(
       "infrastructure", "livelihoods", "natural_habitats", "sense_of_place",
       "species", "unknown", "water"
     ),
-    wri_layer_type = list("domain_score", "recovery", "resilience", "resistance", "status"),
+    wri_dimension = list("domain_score", "recovery", "resilience", "resistance", "status"),
     "proj:code" = list("EPSG:5070")
   ),
   links = list(
@@ -108,7 +108,7 @@ item <- list(
     "proj:code" = paste0("EPSG:", row$crs_epsg),
     data_type = row$data_type,
     wri_domain = row$wri_domain,
-    wri_layer_type = row$wri_layer_type
+    wri_dimension = row$wri_dimension
   ),
   assets = list(
     data = list(

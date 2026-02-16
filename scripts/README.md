@@ -27,7 +27,7 @@ Contains reusable functions used across all scripts:
 | `make_cog_filename()` | Generate unique COG filename from filepath (handles naming collisions) |
 | `classify_data_type()` | Classify WRI layer data type (indicator, aggregate, final_score, exclude) |
 | `extract_domain()` | Parse domain name from file path (livelihoods, biodiversity, etc.) |
-| `classify_layer_type()` | Classify layer type (resistance, recovery, status, domain_score) |
+| `classify_dimension()` | Classify dimension (resistance, recovery, status, domain_score) |
 | `get_raster_header()` | Extract header metadata from GeoTIFF (dimensions, CRS, extent, datatype) |
 | `extent_to_stac_spatial()` | Convert extent from EPSG:5070 to STAC bbox and geometry in EPSG:4326 |
 | `append_rows_csv()` | Append rows to CSV for batch writing during metadata extraction |
@@ -102,7 +102,7 @@ All functions include roxygen-style documentation.
 - Uses local relative path if file returns error or timeout (not hosted)
 - Adds `is_hosted: true/false` property to each STAC item
 - Transforms spatial extent from EPSG:5070 to EPSG:4326 for STAC compliance
-- Adds WRI classification properties (`data_type`, `wri_domain`, `wri_layer_type`)
+- Adds WRI classification properties (`data_type`, `wri_domain`, `wri_dimension`)
 - Adds projection extension (`proj:epsg`)
 - Single datetime for all items: `2026-06-05T00:00:00Z` (project due date)
 - HTTP timeout: 5 seconds per file

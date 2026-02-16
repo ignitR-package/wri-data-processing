@@ -4,7 +4,7 @@
 # Purpose:
 #   Extract header metadata for all WRI GeoTIFFs under data/ and verify the
 #   fixed project assumptions (EPSG:5070, 90x90m resolution, consistent extent).
-#   Classifies each file by data_type, domain, and layer_type for downstream
+#   Classifies each file by data_type, domain, and dimension for downstream
 #   STAC item properties.
 #
 # Outputs:
@@ -92,10 +92,10 @@ for (i in seq_along(files)) {
   # --- Classification fields ---
   # These are used downstream in STAC item properties to enable filtering
   # by data type (indicator/aggregate/final_score), domain (livelihoods, etc.),
-  # and layer type (resistance/recovery/status/domain_score).
+  # and dimension (resistance/recovery/status/domain_score).
   info$data_type <- classify_data_type(fp)
   info$wri_domain <- extract_domain(fp)
-  info$wri_layer_type <- classify_layer_type(info$data_type, basename(fp))
+  info$wri_dimension <- classify_dimension(info$data_type, basename(fp))
   info$cog_filename <- make_cog_filename(fp)
   
   # Initialize assumption check fields

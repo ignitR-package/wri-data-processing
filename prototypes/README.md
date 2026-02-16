@@ -25,7 +25,7 @@ Tests metadata extraction on a single GeoTIFF.
 **Output:** Console only (no files created)
 
 **What it shows:**
-- File classification (data type, domain, layer type)
+- File classification (data type, domain, dimension)
 - Raster dimensions and resolution
 - CRS and extent
 - Value statistics (min, max, mean, NA%)

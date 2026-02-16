@@ -110,7 +110,7 @@ required_cols <- c(
   "filepath", "filename",
   "extent_xmin", "extent_xmax", "extent_ymin", "extent_ymax",
   "crs_epsg",
-  "data_type", "wri_domain", "wri_layer_type",
+  "data_type", "wri_domain", "wri_dimension",
   "cog_filename"
 )
 
@@ -233,7 +233,7 @@ for (i in seq_len(n_total)) {
       # WRI-specific classification (enables filtering)
       data_type = row$data_type,
       wri_domain = row$wri_domain,
-      wri_layer_type = row$wri_layer_type,
+      wri_dimension = row$wri_dimension,
 
       # Custom property to track hosting status
       # This helps fedex package provide better error messages
@@ -293,7 +293,7 @@ collection <- list(
       "infrastructure", "livelihoods", "natural_habitats", "sense_of_place",
       "species", "unknown", "water"
     ),
-    wri_layer_type = list("domain_score", "recovery", "resilience", "resistance", "status"),
+    wri_dimension = list("domain_score", "recovery", "resilience", "resistance", "status"),
     "proj:code" = list("EPSG:5070")
   ),
   links = list(

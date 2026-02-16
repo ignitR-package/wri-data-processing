@@ -130,19 +130,19 @@ extract_domain <- function(filepath) {
   "unknown"
 }
 
-#' Classify layer type from filename and data_type
+#' Classify dimension from filename and data_type
 #'
-#' Determines the specific layer type (resistance, recovery, status, etc.)
+#' Determines the specific dimension (resistance, recovery, status, etc.)
 #' based on filename patterns. Only applies to indicators and aggregates.
 #'
 #' @param data_type Character. One of "indicator", "aggregate", "final_score"
 #' @param filename Character. Basename of the file
-#' @return Layer type string or NA if not applicable
+#' @return Dimension string or NA if not applicable
 #'
 #' @examples
-#' classify_layer_type("indicator", "foo_resistance_bar.tif")
+#' classify_dimension("indicator", "foo_resistance_bar.tif")
 #' # Returns "resistance"
-classify_layer_type <- function(data_type, filename) {
+classify_dimension <- function(data_type, filename) {
   if (data_type == "indicator") {
     if (grepl("_resistance_", filename)) return("resistance")
     if (grepl("_recovery_", filename)) return("recovery")
