@@ -56,10 +56,13 @@ collection_id <- "wri_ignitR"
 item_datetime <- "2026-06-05T00:00:00Z"
 
 # KNB base URL
-knb_base_url <- "https://knb.ecoinformatics.org/data/"
+knb_base_url <- "https://knb.ecoinformatics.org/data/wri-data-processing/cogs/"
 
 # HTTP timeout for checking hosted files (seconds)
 check_timeout <- 5
+
+# If TRUE, rewrite existing STAC item JSON files (useful after schema updates)
+overwrite_existing_items <- FALSE
 
 # --- Output paths -------------------------------------------------------------
 
@@ -171,7 +174,7 @@ if (n_hosted > 0) {
 # --- Build items --------------------------------------------------------------
 
 n_total <- nrow(meta)
-counts <- c(written = 0, skipped = 0, missing_cog = 0)
+counts <- c(written = 0, overwritten = 0, skipped = 0, missing_cog = 0)
 
 cat("Creating STAC items for", n_total, "files\n")
 cat("Output directory:", stac_root, "\n\n")
@@ -190,14 +193,19 @@ for (i in seq_len(n_total)) {
   item_id <- tools::file_path_sans_ext(row$cog_filename)
   item_path <- path(items_dir, paste0(item_id, ".json"))
 
-  # Skip if item already exists (allows resume)
+  # Skip if item exists, unless overwrite is explicitly enabled
   if (file_exists(item_path)) {
-    cat(sprintf("[%d/%d] Item exists, skipping: %s\n", i, n_total, item_id))
-    counts["skipped"] <- counts["skipped"] + 1
-    next
+    if (!overwrite_existing_items) {
+      cat(sprintf("[%d/%d] Item exists, skipping: %s\n", i, n_total, item_id))
+      counts["skipped"] <- counts["skipped"] + 1
+      next
+    } else {
+      cat(sprintf("[%d/%d] Item exists, overwriting: %s ", i, n_total, item_id))
+      counts["overwritten"] <- counts["overwritten"] + 1
+    }
+  } else {
+    cat(sprintf("[%d/%d] Writing item: %s ", i, n_total, item_id))
   }
-
-  cat(sprintf("[%d/%d] Writing item: %s ", i, n_total, item_id))
 
   # Transform extent to EPSG:4326 for STAC
   spatial <- extent_to_stac_spatial(
@@ -288,12 +296,10 @@ collection <- list(
   ),
   summaries = list(
     data_type = list("aggregate", "final_score", "indicator"),
-    wri_domain = list(
-      "air_quality", "communities", "iconic_places", "iconic_species",
-      "infrastructure", "livelihoods", "natural_habitats", "sense_of_place",
-      "species", "unknown", "water"
-    ),
-    wri_dimension = list("domain_score", "recovery", "resilience", "resistance", "status"),
+    wri_domain = as.list(sort(unique(meta$wri_domain[!is.na(meta$wri_domain)]))),
+    wri_dimension = as.list(sort(unique(meta$wri_dimension[
+      !is.na(meta$wri_dimension) & nzchar(trimws(meta$wri_dimension))
+    ]))),
     "proj:code" = list("EPSG:5070")
   ),
   links = list(
@@ -316,6 +322,7 @@ cat("  Items dir:      ", items_dir, "\n")
 cat("  Asset hrefs:     Mixed (", n_hosted, " KNB URLs, ", n_local, " local paths)\n")
 cat("  Total in meta:  ", n_total, "\n")
 cat("  Written:        ", counts["written"], "\n")
+cat("  Overwritten:    ", counts["overwritten"], "\n")
 cat("  Skipped (exist):", counts["skipped"], "\n")
 cat("  Missing COG:    ", counts["missing_cog"], "\n\n")
 
@@ -329,7 +336,7 @@ cat("     # Try a hosted file:\n")
 cat("     get_layer(\"WRI_score\", bbox = c(-122, 37, -121, 38))\n\n")
 
 if (n_local > 0) {
-  cat("⚠️  Note: ", n_local, " files have local paths and cannot be accessed remotely.\n")
+  cat("Note: ", n_local, " files have local paths and cannot be accessed remotely.\n")
   cat("   The fedex package will show appropriate error messages for these.\n")
   cat("   Once files are uploaded to KNB, rerun this script to update the STAC.\n")
 }
