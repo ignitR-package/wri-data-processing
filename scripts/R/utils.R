@@ -244,9 +244,16 @@ extent_to_stac_spatial <- function(xmin, xmax, ymin, ymax, epsg_native = 5070) {
   bbox_4326 <- c(unname(bb["xmin"]), unname(bb["ymin"]), 
                  unname(bb["xmax"]), unname(bb["ymax"]))
   
-  # Build GeoJSON-style geometry (list of coordinate rings)
-  coords <- st_coordinates(poly_4326)
-  ring <- lapply(seq_len(nrow(coords)), function(i) c(coords[i, "X"], coords[i, "Y"]))
+  # Build rectangular GeoJSON polygon directly from bbox.
+  # Avoids projection artifacts (degenerate polygons) that occur when using
+  # st_coordinates() on large extents transformed from EPSG:5070 to WGS84.
+  ring <- list(
+    c(bbox_4326[1], bbox_4326[2]),  # SW
+    c(bbox_4326[3], bbox_4326[2]),  # SE
+    c(bbox_4326[3], bbox_4326[4]),  # NE
+    c(bbox_4326[1], bbox_4326[4]),  # NW
+    c(bbox_4326[1], bbox_4326[2])   # close
+  )
   
   list(
     bbox = bbox_4326,

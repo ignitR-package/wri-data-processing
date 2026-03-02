@@ -256,10 +256,10 @@ for (i in seq_len(n_total)) {
       )
     ),
     links = list(
-      list(rel = "self", href = path_rel(item_path, start = stac_root), type = "application/geo+json"),
-      list(rel = "root", href = "catalog.json", type = "application/json"),
-      list(rel = "parent", href = path_rel(collection_path, start = stac_root), type = "application/json"),
-      list(rel = "collection", href = path_rel(collection_path, start = stac_root), type = "application/json")
+      list(rel = "self", href = path_rel(item_path, start = items_dir), type = "application/geo+json"),
+      list(rel = "root", href = path_rel(catalog_path, start = items_dir), type = "application/json"),
+      list(rel = "parent", href = path_rel(collection_path, start = items_dir), type = "application/json"),
+      list(rel = "collection", href = path_rel(collection_path, start = items_dir), type = "application/json")
     )
   )
 
@@ -303,11 +303,23 @@ collection <- list(
     "proj:code" = list("EPSG:5070")
   ),
   links = list(
-    list(rel = "self", href = path_rel(collection_path, start = stac_root), type = "application/json"),
-    list(rel = "root", href = "catalog.json", type = "application/json"),
-    list(rel = "parent", href = "catalog.json", type = "application/json")
+    list(rel = "self", href = path_rel(collection_path, start = collection_dir), type = "application/json"),
+    list(rel = "root", href = path_rel(catalog_path, start = collection_dir), type = "application/json"),
+    list(rel = "parent", href = path_rel(catalog_path, start = collection_dir), type = "application/json")
   )
 )
+
+# Add item links to collection (required by STAC spec for link-based discovery).
+# One rel="item" link per item so any STAC client can crawl catalog → collection → items.
+item_json_files <- dir_ls(items_dir, glob = "*.json")
+item_links <- lapply(unname(item_json_files), function(f) {
+  list(
+    rel = "item",
+    href = path_rel(f, start = collection_dir),
+    type = "application/geo+json"
+  )
+})
+collection$links <- c(collection$links, item_links)
 
 write_json(catalog, catalog_path, auto_unbox = TRUE, pretty = TRUE)
 write_json(collection, collection_path, auto_unbox = TRUE, pretty = TRUE)
