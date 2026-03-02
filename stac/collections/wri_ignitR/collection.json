@@ -56,18 +56,428 @@
   "links": [
     {
       "rel": "self",
-      "href": "collections/wri_ignitR/collection.json",
+      "href": "collection.json",
       "type": "application/json"
     },
     {
       "rel": "root",
-      "href": "catalog.json",
+      "href": "../../catalog.json",
       "type": "application/json"
     },
     {
       "rel": "parent",
-      "href": "catalog.json",
+      "href": "../../catalog.json",
       "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "items/WRI_score.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/air_quality_domain_score.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/air_quality_resilience.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/air_quality_resistance.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/air_quality_resistance_asthma.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/air_quality_resistance_copd.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/air_quality_resistance_hospital_density.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/air_quality_resistance_vulnerable_populations.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/air_quality_resistance_vulnerable_workers.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/air_quality_status.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/air_quality_status_aqi_100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/air_quality_status_aqi_300.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_domain_score.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_recovery_income.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_recovery_incorporation.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_recovery_owners.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_resilience.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_resistance.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_resistance_age_65_plus.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_resistance_cwpps.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_resistance_disability.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_resistance_egress.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_resistance_firewise_communities.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_resistance_no_vehicle.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/communities_resistance_volunteer_fire_stations.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/infrastructure_domain_score.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/infrastructure_resilience.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/infrastructure_resistance.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/infrastructure_resistance_building_codes.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/infrastructure_resistance_d_space.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/infrastructure_resistance_egress.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/infrastructure_resistance_fire_resource_density.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/infrastructure_resistance_wildland_urban_interface.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/infrastructure_resistance_wildland_urban_interface_test.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/infrastructure_status.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/livelihoods_domain_score.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/livelihoods_recovery_diversity_of_jobs.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/livelihoods_resilience.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/livelihoods_resistance.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/livelihoods_resistance_job_vulnerability.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/livelihoods_status.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/livelihoods_status_housing_burden.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/livelihoods_status_median_income.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/livelihoods_status_unemployment.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/natural_habitats_domain_score.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/natural_habitats_resilience.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/natural_habitats_resistance.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/natural_habitats_status.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_places_domain_score.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_places_recovery_degree_of_protection.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_places_recovery_national_parks.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_places_resilience.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_places_resistance.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_places_resistance_egress.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_places_resistance_fire_resource_density.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_places_resistance_national_parks.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_places_resistance_structures.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_places_resistance_wui.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_places_status_presence.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_species_area_recovery.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_species_domain_score.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_species_resilience.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_species_resistance.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_species_status.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_species_status_75_extinction_rescaled.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_species_traits_recovery.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/sense_of_place_iconic_species_traits_resistance.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/species_domain_score.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/species_recovery_range_area.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/species_recovery_traits.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/species_resilience.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/species_resistance.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/species_resistance_traits.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/species_status.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/water_domain_score.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/water_resilience.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/water_resistance.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/water_resistance_drought_plans.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/water_resistance_water_treatment.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/water_status.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/water_status_surface_water_quantity.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/water_status_surface_water_timing.json",
+      "type": "application/geo+json"
     }
   ]
 }
