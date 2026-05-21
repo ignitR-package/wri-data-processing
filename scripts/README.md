@@ -92,8 +92,8 @@ All functions include roxygen-style documentation.
 **Outputs:**
 
 - `stac/catalog.json` — Root STAC catalog
-- `stac/collections/wri_ignitR/collection.json` — WRI collection
-- `stac/collections/wri_ignitR/items/*.json` — One item per COG (mixed URLs)
+- `stac/c/wri/collection.json` — WRI collection
+- `stac/c/wri/items/*.json` — One item per COG (mixed URLs)
 
 **Key behaviors:**
 
@@ -106,7 +106,7 @@ All functions include roxygen-style documentation.
 - Adds projection extension (`proj:epsg`)
 - Single datetime for all items: `2026-06-05T00:00:00Z` (project due date)
 - HTTP timeout: 5 seconds per file
-- Safe to re-run: skips existing items
+- Safe to re-run: refreshes existing items
 - Network-dependent
 
 **Run time:** Depends on number of files and network speed (makes HTTP HEAD request per file)
@@ -114,7 +114,7 @@ All functions include roxygen-style documentation.
 **When to rerun:**
 
 - After uploading new COGs to KNB
-- Before copying STAC to `fedex` package
+- Before copying STAC to `firex` package
 - Periodically as more files become hosted
 
 ## Running the Pipeline
@@ -133,8 +133,9 @@ source("scripts/01b_make_cog_all.R")
 # Step 02: Create STAC catalog (auto-detects hosted vs local)
 source("scripts/02b_make_stac_all.R")
 
-# Copy to fedex package
-system("cp -r stac/* ../fedex/inst/extdata/stac/")
+# Copy to firex package
+if (fs::dir_exists("../firex/inst/stac")) fs::dir_delete("../firex/inst/stac")
+fs::dir_copy("stac", "../firex/inst/stac")
 
 # After uploading more COGs to KNB, rerun step 02 to refresh hosting status
 ```
@@ -154,7 +155,7 @@ file.exists("metadata/all_layers_inconsistent.csv")
 fs::dir_ls("cogs/")
 
 # STAC items created
-fs::dir_ls("stac/collections/wri_ignitR/items/")
+fs::dir_ls("stac/c/wri/items/")
 ```
 
 ### Re-running After Interruption
@@ -163,7 +164,7 @@ All scripts are designed to resume from where they left off:
 
 - **00:** Reads existing `metadata/all_layers_raw.csv` and skips previously processed files
 - **01:** Checks for existing COG files before converting
-- **02:** Checks for existing STAC item JSON files before creating; re-checks KNB hosting status on each run
+- **02:** Rewrites STAC item JSON files so KNB hosting status and hrefs stay current
 
 Just run the script again — no need to start over.
 
