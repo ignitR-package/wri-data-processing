@@ -2,7 +2,7 @@
 # 02a_make_stac_one.R - Create STAC Catalog + Collection + Item for ONE COG
 #
 # Input:  metadata/all_layers_consistent.csv, cogs/<filename>.tif
-# Output: scratch_output/stac/catalog.json, collection.json, item.json
+# Output: scratch_output/stac/catalog.json, c/wri/collection.json, c/wri/items/<item_id>.json
 # =============================================================================
 
 library(sf)
@@ -44,7 +44,7 @@ spatial <- extent_to_stac_spatial(
 
 # --- Output paths -------------------------------------------------------------
 
-collection_dir <- path(stac_root, "collections", collection_id)
+collection_dir <- path(stac_root, "c", "wri")
 items_dir <- path(collection_dir, "items")
 dir_create(items_dir, recurse = TRUE)
 
@@ -89,9 +89,9 @@ collection <- list(
     "proj:code" = list("EPSG:5070")
   ),
   links = list(
-    list(rel = "self", href = path_rel(collection_path, start = stac_root), type = "application/json"),
-    list(rel = "root", href = "catalog.json", type = "application/json"),
-    list(rel = "parent", href = "catalog.json", type = "application/json")
+    list(rel = "self", href = path_rel(collection_path, start = collection_dir), type = "application/json"),
+    list(rel = "root", href = path_rel(catalog_path, start = collection_dir), type = "application/json"),
+    list(rel = "parent", href = path_rel(catalog_path, start = collection_dir), type = "application/json")
   )
 )
 
@@ -112,17 +112,17 @@ item <- list(
   ),
   assets = list(
     data = list(
-      href = path_rel(cog_path, start = stac_root),
+      href = path_rel(cog_path, start = items_dir),
       type = "image/tiff; application=geotiff; profile=cloud-optimized",
       roles = list("data"),
       title = "COG"
     )
   ),
   links = list(
-    list(rel = "self", href = path_rel(item_path, start = stac_root), type = "application/geo+json"),
-    list(rel = "root", href = "catalog.json", type = "application/json"),
-    list(rel = "parent", href = path_rel(collection_path, start = stac_root), type = "application/json"),
-    list(rel = "collection", href = path_rel(collection_path, start = stac_root), type = "application/json")
+    list(rel = "self", href = path_rel(item_path, start = items_dir), type = "application/geo+json"),
+    list(rel = "root", href = path_rel(catalog_path, start = items_dir), type = "application/json"),
+    list(rel = "parent", href = path_rel(collection_path, start = items_dir), type = "application/json"),
+    list(rel = "collection", href = path_rel(collection_path, start = items_dir), type = "application/json")
   )
 )
 
