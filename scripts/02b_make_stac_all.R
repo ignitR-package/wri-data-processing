@@ -18,8 +18,8 @@
 #
 # Output:
 #   - stac/catalog.json
-#   - stac/collections/<collection_id>/collection.json
-#   - stac/collections/<collection_id>/items/<item_id>.json (one per COG)
+#   - stac/c/wri/collection.json
+#   - stac/c/wri/items/<item_id>.json (one per COG)
 #
 # Usage:
 #   Rscript scripts/02b_make_stac_all.R
@@ -27,12 +27,12 @@
 # When to run:
 #   - After creating COGs (01b)
 #   - After uploading new COGs to KNB
-#   - Before updating the fedex package with new STAC catalog
+#   - Before updating the firex package with new STAC catalog
 #
 # Notes:
 #   - Checks each file individually via HTTP HEAD request to KNB
 #   - Uses KNB URL for hosted files, local path for non-hosted files
-#   - Safe to re-run: skips existing STAC items
+#   - Safe to re-run: refreshes existing STAC items
 #   - Network-dependent: requires connection to KNB for status checks
 # =============================================================================
 
@@ -61,12 +61,12 @@ knb_base_url <- "https://knb.ecoinformatics.org/data/wri-data-processing/cogs/"
 # HTTP timeout for checking hosted files (seconds)
 check_timeout <- 5
 
-# If TRUE, rewrite existing STAC item JSON files (useful after schema updates)
-overwrite_existing_items <- FALSE
+# If TRUE, rewrite existing STAC item JSON files so KNB hosting status stays current
+overwrite_existing_items <- TRUE
 
 # --- Output paths -------------------------------------------------------------
 
-collection_dir <- path(stac_root, "collections", collection_id)
+collection_dir <- path(stac_root, "c", "wri")
 items_dir <- path(collection_dir, "items")
 dir_create(items_dir, recurse = TRUE)
 
@@ -154,7 +154,7 @@ for (i in seq_len(nrow(meta))) {
   is_hosted <- check_knb_hosted(filename, knb_base_url, check_timeout)
   meta$is_hosted[i] <- is_hosted
 
-  cat(ifelse(is_hosted, "✓ HOSTED\n", "✗ not hosted\n"))
+  cat(ifelse(is_hosted, "+ HOSTED\n", "- not hosted\n"))
 }
 
 # Summary
@@ -219,7 +219,7 @@ for (i in seq_len(n_total)) {
     cat("(KNB URL)\n")
   } else {
     # File not hosted - use local path
-    asset_href <- path_rel(cog_path, start = stac_root)
+    asset_href <- path_rel(cog_path, start = items_dir)
     cat("(local path)\n")
   }
 
@@ -244,7 +244,7 @@ for (i in seq_len(n_total)) {
       wri_dimension = row$wri_dimension,
 
       # Custom property to track hosting status
-      # This helps fedex package provide better error messages
+      # This helps firex package provide better error messages
       is_hosted = row$is_hosted
     ),
     assets = list(
@@ -310,7 +310,7 @@ collection <- list(
 )
 
 # Add item links to collection (required by STAC spec for link-based discovery).
-# One rel="item" link per item so any STAC client can crawl catalog → collection → items.
+# One rel="item" link per item so any STAC client can crawl catalog -> collection -> items.
 item_json_files <- dir_ls(items_dir, glob = "*.json")
 item_links <- lapply(unname(item_json_files), function(f) {
   list(
@@ -339,16 +339,16 @@ cat("  Skipped (exist):", counts["skipped"], "\n")
 cat("  Missing COG:    ", counts["missing_cog"], "\n\n")
 
 cat("Next steps:\n")
-cat("  1. Copy STAC to fedex package:\n")
-cat("     cp -r", stac_root, "fedex/inst/extdata/\n\n")
-cat("  2. Test in fedex package:\n")
-cat("     devtools::load_all(\"fedex\")\n")
-cat("     items <- load_stac_items()\n")
+cat("  1. Replace the STAC catalog in firex:\n")
+cat("     if (fs::dir_exists(\"../firex/inst/stac\")) fs::dir_delete(\"../firex/inst/stac\")\n")
+cat("     fs::dir_copy(\"", stac_root, "\", \"../firex/inst/stac\")\n\n", sep = "")
+cat("  2. Test in firex package:\n")
+cat("     devtools::load_all(\"../firex\")\n")
 cat("     # Try a hosted file:\n")
 cat("     get_layer(\"WRI_score\", bbox = c(-122, 37, -121, 38))\n\n")
 
 if (n_local > 0) {
   cat("Note: ", n_local, " files have local paths and cannot be accessed remotely.\n")
-  cat("   The fedex package will show appropriate error messages for these.\n")
+  cat("   The firex package will show appropriate error messages for these.\n")
   cat("   Once files are uploaded to KNB, rerun this script to update the STAC.\n")
 }
